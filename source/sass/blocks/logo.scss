@@ -1,0 +1,36 @@
+.logo {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 15px;
+
+  .logo__link {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-self: center;
+  }
+
+  .logo__img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo__main-text {
+    align-self: flex-end;
+  }
+
+  .logo__under-text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  @include vp-767 {
+    .logo__text-header {
+      display: none;
+    }
+
+    .logo__img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

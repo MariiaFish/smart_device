@@ -1,0 +1,83 @@
+.advantages {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  .advantages__title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .advantages__pharagraph {
+    margin: 0;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .advantages__item {
+    position: relative;
+    min-height: 300px;
+    padding: 40px 45px 35px 45px;
+
+    border: 1px solid $color-border-whisper;
+
+    @media (hover: hover), screen {
+      &:hover,
+      &:focus {
+        background-color: $color-deep-sky-blue;
+
+        .advantages__pharagraph,
+        .advantages__title {
+          color: $color-default-white;
+        }
+
+        .advantages__icon {
+          fill: $color-default-white;
+        }
+      }
+    }
+  }
+
+  .advantages__item::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: $color-deep-sky-blue;
+    left: 0;
+    top: 0;
+  }
+
+  @include vp-1023 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .advantages__list {
+      column-gap: 29px;
+    }
+
+    .advantages__item {
+      min-height: 360px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .advantages__list {
+      grid-template-columns: 100%;
+      column-gap: 0;
+      row-gap: 30px;
+    }
+
+    .advantages__item {
+      min-height: 340px;
+      padding: 30px 30px 35px 30px;
+    }
+  }
+}

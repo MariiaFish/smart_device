@@ -1,0 +1,76 @@
+.main-section {
+  padding-top: 205px;
+  padding-bottom: 180px;
+
+  font-family: $ff-roboto-condensed;
+
+  color: $color-alice-blue;
+  background-image: url("../../img/printed-circuit-board-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+
+  background-color: $color-black-pearl;
+
+  @include retina {
+    background-image: url("../../img/printed-circuit-board-desktop@2x.jpg");
+  }
+
+  .main-section__container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .main-section__text {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .main-section__pharagraph {
+    width: 100%;
+    margin: 0;
+
+    font-family: $ff-pt-mono;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 155%;
+  }
+
+  @include vp-1023 {
+    background-image: url("../../img/printed-circuit-board-tablet.jpg");
+
+    @include retina {
+      background-image: url("../../img/printed-circuit-board-tablet@2x.jpg");
+    }
+
+    .main-section__container {
+      max-width: 670px;
+    }
+
+    .main-section__pharagraph {
+      width: 100%;
+    }
+
+    .main-section__text {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 150px;
+    padding-bottom: 190px;
+
+    background-image: url("../../img/printed-circuit-board@2x.jpg");
+
+    @include retina {
+      background-image: url("../../img/printed-circuit-board@2x.jpg");
+    }
+
+    .main-section__container {
+      min-width: 270px;
+    }
+
+    .main-section__pharagraph {
+      font-size: 14px;
+    }
+  }
+}

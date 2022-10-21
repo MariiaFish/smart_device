@@ -1,0 +1,29 @@
+.pharagraph {
+  &--advantages {
+    color: $color-default-black;
+    font-family: $ff-pt-mono;
+    line-height: 135%;
+  }
+
+  &--about {
+    font-family: $ff-pt-mono;
+    line-height: 22px;
+  }
+
+  &--feedback-main {
+    font-family: $ff-roboto-condensed;
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  &--feedback-under {
+    font-family: $ff-pt-mono;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 134.4%;
+  }
+
+}

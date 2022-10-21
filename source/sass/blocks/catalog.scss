@@ -1,0 +1,169 @@
+.catalog {
+  padding-top: 70px;
+  padding-bottom: 140px;
+  font-family: $ff-roboto-condensed;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+
+  .catalog__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  .catalog__title--mobile {
+    display: none;
+  }
+
+  .catalog__item-title {
+    width: 151px;
+    margin: 0;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .catalog__link {
+    display: block;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 50px;
+  }
+
+  .catalog__item {
+    position: relative;
+    min-height: 650px;
+    min-width: 350px;
+    background-color: $color-black-pearl;
+    background-size: 350px 650px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .catalog__btn-item {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .catalog__item-1 {
+    background-image: url('../../img/catalog-card-1-desktop.jpg');
+
+    @include retina {
+      background-image: url('../../img/catalog-card-1-desktop@2x.jpg');
+    }
+  }
+
+  .catalog__item-2 {
+    background-image: url('../../img/catalog-card-2-desktop.jpg');
+
+    @include retina {
+      background-image: url('../../img/catalog-card-2-desktop@2x.jpg');
+    }
+  }
+
+  .catalog__item-3 {
+    background-image: url('../../img/catalog-card-3-desktop.jpg');
+
+    @include retina {
+      background-image: url('../../img/catalog-card-3-desktop@2x.jpg');
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 58px;
+    padding-bottom: 45px;
+
+    .catalog__title {
+      margin-bottom: 52px;
+    }
+
+    .catalog__list {
+      flex-direction: column;
+    }
+
+    .catalog__item {
+      min-height: 250px;
+      width: 100%;
+      margin-bottom: 30px;
+      background-size: 100% 250px;
+    }
+
+    .catalog__item-1 {
+      background-image: url('../../img/catalog-card-1-tablet.jpg');
+
+      @include retina {
+        background-image: url('../../img/catalog-card-1-tablet@2x.jpg');
+      }
+    }
+
+    .catalog__item-2 {
+      background-image: url('../../img/catalog-card-2-tablet.jpg');
+
+      @include retina {
+        background-image: url('../../img/catalog-card-2-tablet@2x.jpg');
+      }
+    }
+
+    .catalog__item-3 {
+      background-image: url('../../img/catalog-card-3-tablet.jpg');
+
+      @include retina {
+        background-image: url('../../img/catalog-card-3-tablet@2x.jpg');
+      }
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 38px;
+
+    .catalog__title {
+      margin-bottom: 40px;
+    }
+
+    .catalog__title--main {
+      display: none;
+    }
+
+    .catalog__title--mobile {
+      display: block;
+    }
+
+    .catalog__item {
+      min-height: 250px;
+      min-width: 270px;
+      margin-bottom: 30px;
+      background-size: 100% 250px;
+    }
+
+    .catalog__item-1 {
+      background-image: url('../../img/catalog-card-1.jpg');
+
+      @include retina {
+        background-image: url('../../img/catalog-card-1@2x.jpg');
+      }
+    }
+
+    .catalog__item-2 {
+      background-image: url('../../img/catalog-card-2.jpg');
+
+      @include retina {
+        background-image: url('../../img/catalog-card-2@2x.jpg');
+      }
+    }
+
+    .catalog__item-3 {
+      background-image: url('../../img/catalog-card-3.jpg');
+
+      @include retina {
+        background-image: url('../../img/catalog-card-3@2x.jpg');
+      }
+    }
+  }
+}

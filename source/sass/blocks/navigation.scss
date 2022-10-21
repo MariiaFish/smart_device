@@ -1,0 +1,29 @@
+.navigation {
+  margin-right: 30px;
+
+  .navigation__list {
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    column-gap: 30px;
+  }
+
+  @include vp-1023 {
+    margin-right: 0;
+
+    .navigation__list {
+      grid-template-columns: 220px;
+    }
+
+    .navigation__item--seventh-order {
+      order: 7;
+    }
+
+    .navigation__item--sixth-order {
+      order: 6;
+    }
+
+    .navigation__item--fifth-order {
+      order: 5;
+    }
+  }
+}
