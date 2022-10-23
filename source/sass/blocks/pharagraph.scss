@@ -3,6 +3,7 @@
     color: $color-default-black;
     font-family: $ff-pt-mono;
     line-height: 135%;
+    max-width: 505px;
   }
 
   &--about {
@@ -16,14 +17,36 @@
     line-height: 51px;
   }
 
+  &--feedback-modal {
+    font-size: 30px;
+    line-height: 140.62%;
+  }
+
   &--feedback-under {
     font-family: $ff-pt-mono;
     line-height: 22px;
   }
 
   @include vp-767 {
-    font-size: 14px;
-    line-height: 134.4%;
-  }
+    &--advantages {
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 210px;
+    }
 
+    &--feedback-main {
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    &--feedback-under {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &--about {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
 }

@@ -28,15 +28,16 @@
     font-size: 80px;
     line-height: 94px;
     letter-spacing: 0.07em;
+    text-transform: uppercase;
   }
 
-  &--main-section-btn {
+  &--main-section-link {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
   }
 
-  &--main-section-btn-mobile {
+  &--main-section-link-mobile {
     display: none;
   }
 
@@ -48,7 +49,6 @@
   }
 
   @include vp-1023 {
-
     &--main-section {
       font-size: 64px;
       line-height: 75px;
@@ -61,11 +61,11 @@
       line-height: 42px;
     }
 
-    &--main-section-btn {
+    &--main-section-link {
       display: none;
     }
 
-    &--main-section-btn-mobile{
+    &--main-section-link-mobile {
       display: block;
       font-weight: 700;
       font-size: 14px;

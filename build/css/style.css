@@ -428,6 +428,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -634,7 +635,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1302px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -683,30 +684,21 @@ button,
   margin: 0;
 }
 
-.btn--main-section {
-  padding: 15px 25px;
-  margin-top: 40px;
-  margin-bottom: 0;
-  font-size: 18px;
-  line-height: 21px;
-  background-color: #00B2ff;
-}
-
 .btn--about {
   min-width: 180px;
   padding: 13px 13px 14px 12px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #00B2ff;
+  color: #00b3ff;
   border-width: 1px;
   border-style: solid;
-  border-color: #00B2ff;
+  border-color: #00b3ff;
 }
 
 .btn--catalog {
   margin: 0;
-  background-color: #00B2ff;
+  background-color: #00b3ff;
   background-image: url("../../img/svg/catolog-card-arrow.svg");
   background-size: 4px 8px;
   background-repeat: no-repeat;
@@ -714,11 +706,17 @@ button,
 }
 
 .btn--feedback {
-  min-width: 265px;
+  min-width: 215px;
   padding: 15px 25px;
+  margin-top: 6px;
+  margin-bottom: 0;
   line-height: 19px;
   color: #ffffff;
   background-color: #000000;
+}
+
+.btn--feedback-modal {
+  width: 100%;
 }
 
 .btn:disabled {
@@ -796,6 +794,11 @@ button,
   background-color: #ffffff;
 }
 
+.modal__content--feedback {
+  background-color: #00b3ff;
+  color: #ffffff;
+}
+
 .modal__close-btn {
   position: absolute;
   top: 22px;
@@ -807,6 +810,10 @@ button,
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
+}
+
+.modal__close-btn--feedback {
+  fill: #ffffff;
 }
 
 .modal--responsive .modal__content {
@@ -843,14 +850,14 @@ button,
   width: 100%;
   padding-top: 30px;
   padding-bottom: 35px;
+  z-index: 2;
   color: #f2f5f7;
-  background-image: url("../../img/bg-header-desktop.png");
-  background-position: center;
-  background-size: 1920px 127px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, #041827), to(rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(#041827 75%, rgba(255, 255, 255, 0));
   background: linear-gradient(#041827 75%, rgba(255, 255, 255, 0));
-  z-index: 2;
+  background-image: url("../../img/bg-header-desktop.png");
+  background-position: center;
+  background-size: 1920px 127px;
 }
 
 .header .header__container {
@@ -873,6 +880,8 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .header .header__user-menu-link {
@@ -880,6 +889,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin-right: 30px;
+  margin-top: 10px;
   color: #f2f5f7;
 }
 
@@ -915,15 +925,16 @@ button,
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
-.text--main-section-btn {
+.text--main-section-link {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
 }
 
-.text--main-section-btn-mobile {
+.text--main-section-link-mobile {
   display: none;
 }
 
@@ -981,23 +992,26 @@ button,
 }
 
 .footer h2 {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 0.05em;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .footer .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1302px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .footer .footer__btn-toggle {
@@ -1018,8 +1032,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .footer .footer__title {
@@ -1029,6 +1041,7 @@ button,
 
 .footer .footer__list-text {
   font-family: "PT Mono", "Courier New", monospace;
+  line-height: 135%;
   color: #ffffffb3;
 }
 
@@ -1044,10 +1057,10 @@ button,
 
 .title--advantages {
   font-weight: 400;
-  line-height: 140%;
+  line-height: 34px;
   font-size: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  color: #00B2ff;
+  color: #00b3ff;
 }
 
 .title--about {
@@ -1084,6 +1097,10 @@ button,
   column-gap: 30px;
 }
 
+.navigation .navigation__item {
+  margin-bottom: 10px;
+}
+
 .social {
   margin-left: 10px;
   margin-top: 30px;
@@ -1109,13 +1126,21 @@ button,
   width: 345px;
 }
 
+.link--get-consultation {
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #00b3ff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .main-section {
-  padding-top: 205px;
+  min-height: 880px;
+  padding-top: 305px;
   padding-bottom: 180px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #f2f5f7;
   background-image: url("../../img/printed-circuit-board-desktop.jpg");
-  background-position: center;
   background-size: cover;
   background-color: #041827;
 }
@@ -1125,9 +1150,21 @@ button,
   margin: 0 auto;
 }
 
+.main-section .main-section__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 410px;
+  margin-top: 50px;
+  padding: 15px 25px;
+}
+
 .main-section .main-section__text {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 }
 
 .main-section .main-section__pharagraph {
@@ -1143,6 +1180,7 @@ button,
   color: #000000;
   font-family: "PT Mono", "Courier New", monospace;
   line-height: 135%;
+  max-width: 505px;
 }
 
 .pharagraph--about {
@@ -1154,6 +1192,11 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 36px;
   line-height: 51px;
+}
+
+.pharagraph--feedback-modal {
+  font-size: 30px;
+  line-height: 140.62%;
 }
 
 .pharagraph--feedback-under {
@@ -1198,28 +1241,24 @@ button,
   content: "";
   width: 5px;
   height: 100%;
-  background-color: #00B2ff;
+  background-color: #00b3ff;
   left: 0;
   top: 0;
 }
 
 .about {
-  color: #041827;
-  margin-bottom: 100px;
-}
-
-.about .about__container {
+  margin-bottom: 80px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  color: #041827;
 }
 
 .about .about__title {
@@ -1227,14 +1266,9 @@ button,
   margin-bottom: 15px;
 }
 
-.about .about__description {
-  width: 72%;
-}
-
 .about .about__image {
   width: 150px;
   height: 320px;
-  margin-right: 100px;
   -o-object-fit: contain;
   object-fit: contain;
   -ms-flex-item-align: start;
@@ -1245,20 +1279,24 @@ button,
   margin-bottom: 20px;
 }
 
-.about .abot__pharagraph-container {
+.about .about__pharagraph-container {
   margin-bottom: 20px;
   max-width: 970px;
+}
+
+.about .about__pharagraph--mobile {
+  display: none;
 }
 
 .about .about__btn-text {
   display: none;
 }
 
-.about [data-about-btn-state='active'] {
+.about [data-about-btn-state="active"] {
   display: block;
 }
 
-.about [data-about-btn-state='inactive'] {
+.about [data-about-btn-state="inactive"] {
   display: none;
 }
 
@@ -1293,17 +1331,19 @@ button,
 }
 
 .catalog .catalog__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 85px;
+  -moz-column-gap: 85px;
+  column-gap: 85px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .catalog .catalog__link {
@@ -1316,7 +1356,7 @@ button,
 .catalog .catalog__item {
   position: relative;
   min-height: 650px;
-  min-width: 350px;
+  max-width: 350px;
   background-color: #041827;
   background-size: 350px 650px;
   background-repeat: no-repeat;
@@ -1344,20 +1384,40 @@ button,
 }
 
 .feedback {
-  padding-top: 170px;
+  padding-top: 165px;
   padding-bottom: 250px;
   color: #ffffff;
-  background-color: #00B2ff;
+  background-color: #00b3ff;
+  background-image: url("../../img/feedback-bg-desktop.png");
+  background-position: 0 bottom;
+}
+
+.feedback--modal {
+  width: 500px;
+  padding: 60px 40px;
+  background-image: none;
+  border-radius: 3px;
 }
 
 .feedback .feedback__container {
+  position: relative;
   max-width: 580px;
   margin-left: auto;
 }
 
+.feedback .feedback__container::after {
+  content: "";
+  position: absolute;
+  width: 510px;
+  height: 285px;
+  top: 19%;
+  left: -94%;
+  background-image: url("../../img/paper-airplane-desktop.png");
+}
+
 .feedback .feedback__pharagraph-main {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 }
 
 .feedback .feedback__pharagraph-under {
@@ -1379,6 +1439,11 @@ button,
   margin-top: 35px;
 }
 
+.feedback .feedback__form--modal {
+  -ms-grid-columns: 420px;
+  grid-template-columns: 420px;
+}
+
 .feedback .feedback__input-container-textarea {
   -ms-grid-column: 1;
   grid-column-start: 1;
@@ -1387,12 +1452,24 @@ button,
 }
 
 .feedback .feedback__input-container-data-processing {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-item-align: end;
+  align-self: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.feedback .feedback__input-container-data-processing--feedback-modal {
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  justify-content: normal;
 }
 
 .feedback .feedback__btn {
@@ -1417,6 +1494,7 @@ button,
 }
 
 .feedback label {
+  margin-left: 15px;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.8;
@@ -1424,13 +1502,12 @@ button,
 
 .feedback input {
   min-height: 50px;
+  min-width: 15px;
 }
 
 .feedback input[type="checkbox"] {
-  position: relative;
   width: 15px;
   height: 15px;
-  margin-right: 11px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1438,26 +1515,39 @@ button,
   cursor: pointer;
 }
 
-.feedback input[type="checkbox"]::after {
+.feedback input[type="checkbox"]::before {
   position: absolute;
   content: "";
   width: 15px;
   height: 15px;
-  top: 30%;
+  top: 28px;
+  left: 0;
   border-radius: 2px;
   border: 1px solid #ffffff;
 }
 
-.feedback input[type="checkbox"]:checked::before {
+.feedback input[type="checkbox"]:checked::after {
   position: absolute;
   content: "";
   width: 7px;
   height: 6px;
-  top: 37%;
-  left: 30%;
+  top: 32px;
+  left: 4px;
   background-image: url("../../img/svg/checked-vector.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.feedback .feedback__input-container-data-processing--feedback-modal > input[type="checkbox"]::before {
+  top: 34px;
+}
+
+.feedback .feedback__input-container-data-processing--feedback-modal > input[type="checkbox"]:checked::after {
+  top: 38px;
+}
+
+.feedback textarea {
+  min-height: 155px;
 }
 
 .feedback input::-webkit-input-placeholder,
@@ -1490,6 +1580,31 @@ button,
   color: #ffffff;
 }
 
+.feedback input:focus,
+.feedback textarea:focus {
+  padding-left: 15px;
+}
+
+.feedback input:focus::-webkit-input-placeholder {
+  padding-left: 0;
+}
+
+.feedback input:focus::-moz-placeholder {
+  padding-left: 0;
+}
+
+.feedback input:focus:-ms-input-placeholder {
+  padding-left: 0;
+}
+
+.feedback input:focus::-ms-input-placeholder {
+  padding-left: 0;
+}
+
+.feedback input:focus::placeholder {
+  padding-left: 0;
+}
+
 .feedback textarea::-webkit-input-placeholder {
   padding-top: 24px;
 }
@@ -1510,6 +1625,31 @@ button,
   padding-top: 24px;
 }
 
+.feedback textarea:focus::-webkit-input-placeholder {
+  padding-left: 0;
+  padding-top: 24px;
+}
+
+.feedback textarea:focus::-moz-placeholder {
+  padding-left: 0;
+  padding-top: 24px;
+}
+
+.feedback textarea:focus:-ms-input-placeholder {
+  padding-left: 0;
+  padding-top: 24px;
+}
+
+.feedback textarea:focus::-ms-input-placeholder {
+  padding-left: 0;
+  padding-top: 24px;
+}
+
+.feedback textarea:focus::placeholder {
+  padding-left: 0;
+  padding-top: 24px;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1526,23 +1666,24 @@ button,
 
 @media (max-width: 1439px) {
   .container {
-    max-width: 1222px;
+    max-width: 1302px;
+    padding: 0 32px;
+  }
+
+  .footer .footer__container {
+    max-width: 1302px;
     padding: 0 32px;
   }
 }
 
 @media (max-width: 1023px) {
   .container {
-    max-width: 770px;
+    max-width: 670px;
     padding: 0 24px;
   }
 
-  .btn--main-section {
-    margin-top: 50px;
-    margin-left: 45px;
-  }
-
   .btn--about {
+    margin: 0;
     padding: 14px 13px 13px 12px;
   }
 
@@ -1574,6 +1715,18 @@ button,
     line-height: 75px;
   }
 
+  .footer {
+    padding-top: 52px;
+    padding-bottom: 65px;
+  }
+
+  .footer .footer__container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 670px;
+    padding: 0 24px;
+  }
+
   .footer .footer__upper-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1592,10 +1745,17 @@ button,
   }
 
   .footer .footer__lower-container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .footer .footer__title {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   .navigation {
@@ -1605,6 +1765,10 @@ button,
   .navigation .navigation__list {
     -ms-grid-columns: 220px;
     grid-template-columns: 220px;
+  }
+
+  .navigation .navigation__item {
+    margin-bottom: 4px;
   }
 
   .navigation .navigation__item--seventh-order {
@@ -1633,7 +1797,13 @@ button,
     width: 320px;
   }
 
+  .contacts .contacts__item {
+    margin-bottom: 8px;
+  }
+
   .main-section {
+    min-height: 640px;
+    padding-top: 180px;
     background-image: url("../../img/printed-circuit-board-tablet.jpg");
   }
 
@@ -1641,12 +1811,17 @@ button,
     max-width: 670px;
   }
 
+  .main-section .main-section__link {
+    margin-top: 59px;
+    margin-left: 45px;
+  }
+
   .main-section .main-section__pharagraph {
     width: 100%;
   }
 
   .main-section .main-section__text {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .advantages {
@@ -1662,6 +1837,31 @@ button,
 
   .advantages .advantages__item {
     min-height: 360px;
+    padding-right: 30px;
+  }
+
+  .advantages .advantages__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .about {
+    margin-bottom: 75px;
+  }
+
+  .about .about__container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .about .about__pharagraph {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .about .about__title {
+    margin-bottom: 7px;
   }
 
   .about .about__image {
@@ -1670,34 +1870,37 @@ button,
   }
 
   .about .about__description {
-    width: 68%;
-  }
-
-  .about .abot__pharagraph-container {
     max-width: 495px;
   }
 
+  .about .about__button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .catalog {
-    padding-top: 58px;
-    padding-bottom: 45px;
+    padding-top: 54px;
+    padding-bottom: 75px;
   }
 
   .catalog .catalog__title {
-    margin-bottom: 52px;
+    margin-bottom: 40px;
   }
 
   .catalog .catalog__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    row-gap: 30px;
   }
 
   .catalog .catalog__item {
     min-height: 250px;
-    width: 100%;
-    margin-bottom: 30px;
+    max-width: 100%;
     background-size: 100% 250px;
+  }
+
+  .catalog .catalog__link {
+    padding-top: 36px;
   }
 
   .catalog .catalog__item-1 {
@@ -1710,6 +1913,72 @@ button,
 
   .catalog .catalog__item-3 {
     background-image: url("../../img/catalog-card-3-tablet.jpg");
+  }
+
+  .feedback {
+    padding-top: 45px;
+    padding-bottom: 123px;
+    background-image: none;
+  }
+
+  .feedback .feedback__container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .feedback .feedback__pharagraph-main {
+    margin-bottom: 6px;
+  }
+
+  .feedback .feedback__form {
+    width: 100%;
+    -ms-grid-columns: (48%)[2];
+    grid-template-columns: repeat(2, 48%);
+    margin-top: 25px;
+  }
+
+  .feedback .feedback__container::after {
+    display: none;
+  }
+
+  .feedback .feedback__input-container-data-processing {
+    max-width: 235px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .feedback textarea::-webkit-input-placeholder {
+    padding-top: 32px;
+  }
+
+  .feedback textarea::-moz-placeholder {
+    padding-top: 32px;
+  }
+
+  .feedback textarea:-ms-input-placeholder {
+    padding-top: 32px;
+  }
+
+  .feedback textarea::-ms-input-placeholder {
+    padding-top: 32px;
+  }
+
+  .feedback textarea::placeholder {
+    padding-top: 32px;
+  }
+
+  .feedback input[type="checkbox"]:checked::after {
+    top: 25px;
+    left: 0;
+  }
+
+  .feedback input[type="checkbox"]::before {
+    top: 25px;
+    left: -2px;
+  }
+
+  .feedback label {
+    margin-left: 8px;
   }
 }
 
@@ -1741,18 +2010,13 @@ button,
     padding: 0 16px;
   }
 
-  .btn--main-section {
-    width: 270px;
-    margin-top: 50px;
-    margin-left: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
   .btn--about {
     min-width: 160px;
     padding: 8px 15px 9px 15px;
+  }
+
+  .btn--feedback {
+    min-width: 100%;
   }
 
   .modal__wrapper {
@@ -1775,16 +2039,20 @@ button,
     background-size: 320px 70px;
   }
 
+  .header .header__user-menu-link {
+    margin-top: 5px;
+  }
+
   .text--main-section {
     font-size: 36px;
     line-height: 42px;
   }
 
-  .text--main-section-btn {
+  .text--main-section-link {
     display: none;
   }
 
-  .text--main-section-btn-mobile {
+  .text--main-section-link-mobile {
     display: block;
     font-weight: 700;
     font-size: 14px;
@@ -1798,6 +2066,25 @@ button,
   .logo .logo__img {
     width: 35px;
     height: 35px;
+  }
+
+  .logo .logo__img--footer {
+    width: 55px;
+    height: 55px;
+  }
+
+  .footer {
+    padding-top: 35px;
+  }
+
+  .footer .footer__container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .footer .footer__wrapper {
+    min-width: 270px;
+    padding: 0 16px;
   }
 
   .footer .footer__upper-container {
@@ -1816,31 +2103,39 @@ button,
 
   .footer .footer__title {
     position: relative;
-    margin-top: 20px;
+    margin-top: 22px;
   }
 
-  .footer .footer__navigation,
+  .footer .footer__navigation {
+    border-top: 1px solid #ffffffb3;
+    border-bottom: 1px solid #ffffffb3;
+  }
+
   .footer .footer__contacts {
-    position: relative;
+    border-bottom: 1px solid #ffffffb3;
   }
 
   .footer .footer__btn-toggle {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 13px;
     right: 0;
+  }
+
+  .footer .footer__upper-container {
+    margin-bottom: 25px;
   }
 
   .footer [data-accordion-btn="close"] {
     background-image: url("../../img/svg/plus.svg");
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: 50% 50%;
   }
 
   .footer [data-accordion-btn="open"] {
     background-image: url("../../img/svg/minus.svg");
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: 50% 50%;
   }
 
   .footer [data-accordion-block="open"] {
@@ -1853,6 +2148,7 @@ button,
 
   .title--advantages {
     font-size: 20px;
+    line-height: 28px;
   }
 
   .title--about {
@@ -1860,8 +2156,17 @@ button,
     line-height: 140.62%;
   }
 
+  .title--catalog {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .title--catalog-item {
+    font-size: 18px;
+  }
+
   .social {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .contacts .contacts__list {
@@ -1870,7 +2175,8 @@ button,
 
   .main-section {
     padding-top: 150px;
-    padding-bottom: 190px;
+    padding-bottom: 185px;
+    min-height: 560px;
     background-image: url("../../img/printed-circuit-board@2x.jpg");
   }
 
@@ -1878,18 +2184,47 @@ button,
     min-width: 270px;
   }
 
+  .main-section .main-section__text {
+    margin-bottom: 6px;
+  }
+
+  .main-section .main-section__link {
+    max-width: 270px;
+    margin-top: 44px;
+    margin-left: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
   .main-section .main-section__pharagraph {
     font-size: 14px;
   }
 
-  .pharagraph {
+  .pharagraph--advantages {
     font-size: 14px;
-    line-height: 134.4%;
+    line-height: 19px;
+    max-width: 210px;
+  }
+
+  .pharagraph--feedback-main {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .pharagraph--feedback-under {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .pharagraph--about {
+    font-size: 14px;
+    line-height: 19px;
   }
 
   .advantages {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 38px;
   }
 
   .advantages .advantages__list {
@@ -1902,29 +2237,62 @@ button,
   }
 
   .advantages .advantages__item {
-    min-height: 340px;
+    min-height: 335px;
     padding: 30px 30px 35px 30px;
+  }
+
+  .advantages .advantages__pharagraph {
+    min-height: 152px;
+  }
+
+  .advantages .advantages__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .advantages .advantages__title {
+    margin-top: 9px;
+    margin-bottom: 8px;
   }
 
   .about .about__image {
     display: none;
   }
 
-  .about .about__description {
-    width: 100%;
+  .about .about__title {
+    margin-bottom: 10px;
   }
 
-  .about .abot__pharagraph-container {
+  .about .about__description {
+    min-width: 270px;
     max-width: 100%;
+  }
+
+  .about .about__pharagraph {
+    margin-bottom: 17px;
+  }
+
+  .about .about__pharagraph--mobile {
+    display: block;
+  }
+
+  .about .about__pharagraph--no-mobile {
+    display: none;
   }
 
   .catalog {
     padding-top: 50px;
-    padding-bottom: 38px;
+    padding-bottom: 86px;
   }
 
   .catalog .catalog__title {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+  }
+
+  .catalog .catalog__link {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 0;
   }
 
   .catalog .catalog__title--main {
@@ -1938,8 +2306,12 @@ button,
   .catalog .catalog__item {
     min-height: 250px;
     min-width: 270px;
-    margin-bottom: 30px;
     background-size: 100% 250px;
+  }
+
+  .catalog .catalog__btn-item {
+    width: 40px;
+    height: 40px;
   }
 
   .catalog .catalog__item-1 {
@@ -1952,6 +2324,69 @@ button,
 
   .catalog .catalog__item-3 {
     background-image: url("../../img/catalog-card-3.jpg");
+  }
+
+  .feedback {
+    padding-top: 50px;
+    padding-bottom: 69px;
+  }
+
+  .feedback .feedback__pharagraph-main {
+    margin-bottom: 6px;
+  }
+
+  .feedback .feedback__pharagraph-under {
+    max-width: 270px;
+  }
+
+  .feedback .feedback__form {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    margin-top: 33px;
+  }
+
+  .feedback textarea {
+    min-height: 180px;
+  }
+
+  .feedback textarea::-webkit-input-placeholder {
+    padding-top: 25px;
+  }
+
+  .feedback textarea::-moz-placeholder {
+    padding-top: 25px;
+  }
+
+  .feedback textarea:-ms-input-placeholder {
+    padding-top: 25px;
+  }
+
+  .feedback textarea::-ms-input-placeholder {
+    padding-top: 25px;
+  }
+
+  .feedback textarea::placeholder {
+    padding-top: 25px;
+  }
+
+  .feedback .feedback__input-container-data-processing {
+    margin-left: 6px;
+  }
+
+  .feedback input[type="checkbox"]::before {
+    top: 6px;
+    left: 7px;
+  }
+
+  .feedback input[type="checkbox"]:checked::after {
+    top: 9px;
+    left: 10px;
+  }
+
+  .feedback label {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin-left: 19px;
   }
 }
 
@@ -2002,7 +2437,7 @@ button,
 @media (hover: hover), screen {
   .advantages .advantages__item:hover,
   .advantages .advantages__item:focus {
-    background-color: #00B2ff;
+    background-color: #00b3ff;
   }
 
   .advantages .advantages__item:hover .advantages__pharagraph,

@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {setAccordion} from './modules/accordion';
 import {setAboutSecton} from './modules/about';
-// import {phoneMask} from './modules/phone-input';
+import {setPhoneMask} from './modules/phone-input';
 
 
 // ---------------------------------
@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
-  // phoneMask();
+  setPhoneMask();
   setAccordion();
   setAboutSecton();
   // ---------------------------------

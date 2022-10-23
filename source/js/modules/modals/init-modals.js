@@ -11,7 +11,7 @@ let modals;
 
 // closeCallback() {
 //   openModalInCloseCallback('modal-5');
-// },
+// };
 
 const settings = {
   'default': {
@@ -37,5 +37,7 @@ const initModals = () => {
   // Используйте в разработке экспортируемую переменную modals, window сделан для бэкэнда
   window.modals = modals;
 };
+
+// openModalInCloseCallback('modal--my');
 
 export {modals, initModals};

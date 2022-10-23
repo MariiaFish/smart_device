@@ -4,18 +4,17 @@
   padding-top: 30px;
   padding-bottom: 35px;
 
+  z-index: 2;
+
   color: $color-alice-blue;
+  background: linear-gradient($color-black-pearl 75%, $color-transparent);
   background-image: url("../../img/bg-header-desktop.png");
   background-position: center;
   background-size: 1920px 127px;
-  background: linear-gradient($color-black-pearl 75%, $color-transparent);
-
-  z-index: 2;
 
   @include retina {
     background-image: url("../../img/bg-header-desktop@2x.png");
   }
-
 
   .header__container {
     display: flex;
@@ -27,11 +26,13 @@
   .header__user-menu {
     display: flex;
     flex-wrap: wrap;
+    align-self: flex-start;
   }
 
   .header__user-menu-link {
     display: flex;
     margin-right: 30px;
+    margin-top: 10px;
     color: $color-alice-blue;
   }
 
@@ -76,6 +77,10 @@
 
     @include retina {
       background-image: url("../../img/bg-header@2x.png");
+    }
+
+    .header__user-menu-link {
+      margin-top: 5px;
     }
   }
 }

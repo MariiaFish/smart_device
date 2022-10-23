@@ -1,26 +1,19 @@
 .about {
+  margin-bottom: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: $color-black-pearl;
-  margin-bottom: 100px;
-  .about__container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
 
   .about__title {
     margin-top: 0;
     margin-bottom: 15px;
   }
 
-  .about__description {
-    width: 72%;
-  }
-
   .about__image {
     width: 150px;
     height: 320px;
-    margin-right: 100px;
     object-fit: contain;
     align-self: flex-start;
   }
@@ -29,20 +22,24 @@
     margin-bottom: 20px;
   }
 
-  .abot__pharagraph-container {
+  .about__pharagraph-container {
     margin-bottom: 20px;
     max-width: 970px;
+  }
+
+  .about__pharagraph--mobile {
+    display: none;
   }
 
   .about__btn-text {
     display: none;
   }
 
-  [data-about-btn-state='active'] {
+  [data-about-btn-state="active"] {
     display: block;
   }
 
-  [data-about-btn-state='inactive'] {
+  [data-about-btn-state="inactive"] {
     display: none;
   }
 
@@ -55,17 +52,33 @@
   }
 
   @include vp-1023 {
+    margin-bottom: 75px;
+
+    .about__container {
+      align-items: center;
+    }
+
+    .about__pharagraph {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .about__title {
+      margin-bottom: 7px;
+    }
+
     .about__image {
       width: 143px;
       margin-right: 29px;
     }
 
     .about__description {
-      width: 68%;
+      max-width: 495px;
     }
 
-    .abot__pharagraph-container {
-      max-width: 495px;
+    .about__button {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -74,12 +87,25 @@
       display: none;
     }
 
-    .about__description {
-      width: 100%;
+    .about__title {
+      margin-bottom: 10px;
     }
 
-    .abot__pharagraph-container {
+    .about__description {
+      min-width: 270px;
       max-width: 100%;
+    }
+
+    .about__pharagraph {
+      margin-bottom: 17px;
+    }
+
+    .about__pharagraph--mobile {
+      display: block;
+    }
+
+    .about__pharagraph--no-mobile {
+      display: none;
     }
   }
 }

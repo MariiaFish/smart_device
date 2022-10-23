@@ -7,10 +7,10 @@ const ACTIVE_STATE_BUTTON = 'active';
 const INACTIVE_STATE_BUTTON = 'inactive';
 
 const aboutContainer = document.querySelector('.about__container');
-const aboutButton = aboutContainer.querySelector('.about__button');
-const buttonShowLess = aboutButton.querySelector('.about__btn-less');
-const buttonShowMore = aboutButton.querySelector('.about__btn-more');
-const aboutExtraBlock = aboutContainer.querySelector('.abot__pharagraph-container--full');
+const aboutButton = aboutContainer && aboutContainer.querySelector('.about__button');
+const buttonShowLess = aboutButton && aboutButton.querySelector('.about__btn-less');
+const buttonShowMore = aboutButton && aboutButton.querySelector('.about__btn-more');
+const aboutExtraBlock = aboutContainer && aboutContainer.querySelector('.about__pharagraph-container--full');
 
 const openAboutBlock = (trigerButton) => {
   setAttributeValue(buttonShowMore, ABOUT_BUTTON_ACTIVE, INACTIVE_STATE_BUTTON);
@@ -35,7 +35,9 @@ const aboutButtonHandler = (button) => () => {
 };
 
 const setButtonHandler = (button, handler) => {
-  button.addEventListener('click', handler(button));
+  if (button) {
+    button.addEventListener('click', handler(button));
+  }
 };
 
 const setAboutSecton = () => {
