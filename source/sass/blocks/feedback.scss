@@ -148,9 +148,13 @@
     min-height: 155px;
   }
 
+  input,
+  textarea {
+    padding-left: 15px;
+  }
+
   input::placeholder,
   textarea::placeholder {
-    padding-left: 15px;
     color: $color-default-white;
   }
 
@@ -159,16 +163,11 @@
     padding-left: 15px;
   }
 
-  input:focus::placeholder {
-    padding-left: 0;
-  }
-
-  textarea::placeholder {
+  textarea {
     padding-top: 24px;
   }
 
-  textarea:focus::placeholder {
-    padding-left: 0;
+  textarea:focus {
     padding-top: 24px;
   }
 

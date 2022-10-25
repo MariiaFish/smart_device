@@ -1550,33 +1550,33 @@ button,
   min-height: 155px;
 }
 
+.feedback input,
+.feedback textarea {
+  padding-left: 15px;
+}
+
 .feedback input::-webkit-input-placeholder,
 .feedback textarea::-webkit-input-placeholder {
-  padding-left: 15px;
   color: #ffffff;
 }
 
 .feedback input::-moz-placeholder,
 .feedback textarea::-moz-placeholder {
-  padding-left: 15px;
   color: #ffffff;
 }
 
 .feedback input:-ms-input-placeholder,
 .feedback textarea:-ms-input-placeholder {
-  padding-left: 15px;
   color: #ffffff;
 }
 
 .feedback input::-ms-input-placeholder,
 .feedback textarea::-ms-input-placeholder {
-  padding-left: 15px;
   color: #ffffff;
 }
 
 .feedback input::placeholder,
 .feedback textarea::placeholder {
-  padding-left: 15px;
   color: #ffffff;
 }
 
@@ -1585,68 +1585,11 @@ button,
   padding-left: 15px;
 }
 
-.feedback input:focus::-webkit-input-placeholder {
-  padding-left: 0;
-}
-
-.feedback input:focus::-moz-placeholder {
-  padding-left: 0;
-}
-
-.feedback input:focus:-ms-input-placeholder {
-  padding-left: 0;
-}
-
-.feedback input:focus::-ms-input-placeholder {
-  padding-left: 0;
-}
-
-.feedback input:focus::placeholder {
-  padding-left: 0;
-}
-
-.feedback textarea::-webkit-input-placeholder {
+.feedback textarea {
   padding-top: 24px;
 }
 
-.feedback textarea::-moz-placeholder {
-  padding-top: 24px;
-}
-
-.feedback textarea:-ms-input-placeholder {
-  padding-top: 24px;
-}
-
-.feedback textarea::-ms-input-placeholder {
-  padding-top: 24px;
-}
-
-.feedback textarea::placeholder {
-  padding-top: 24px;
-}
-
-.feedback textarea:focus::-webkit-input-placeholder {
-  padding-left: 0;
-  padding-top: 24px;
-}
-
-.feedback textarea:focus::-moz-placeholder {
-  padding-left: 0;
-  padding-top: 24px;
-}
-
-.feedback textarea:focus:-ms-input-placeholder {
-  padding-left: 0;
-  padding-top: 24px;
-}
-
-.feedback textarea:focus::-ms-input-placeholder {
-  padding-left: 0;
-  padding-top: 24px;
-}
-
-.feedback textarea:focus::placeholder {
-  padding-left: 0;
+.feedback textarea:focus {
   padding-top: 24px;
 }
 
@@ -2092,6 +2035,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-bottom: 25px;
   }
 
   .footer .footer__lower-container {
@@ -2120,10 +2064,6 @@ button,
     position: absolute;
     top: 13px;
     right: 0;
-  }
-
-  .footer .footer__upper-container {
-    margin-bottom: 25px;
   }
 
   .footer [data-accordion-btn="close"] {
