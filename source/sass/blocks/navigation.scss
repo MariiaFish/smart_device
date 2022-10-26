@@ -1,9 +1,9 @@
 .navigation {
-  margin-right: 30px;
+  margin-right: 96px;
 
   .navigation__list {
     display: grid;
-    grid-template-columns: repeat(2, 49%);
+    grid-template-columns: repeat(2, 54%);
     column-gap: 30px;
   }
 
@@ -32,6 +32,16 @@
 
     .navigation__item--fifth-order {
       order: 5;
+    }
+  }
+
+  @include vp-767 {
+    [data-accordion-block="open"] {
+      display: block;
+    }
+
+    [data-accordion-block="close"] {
+      display: none;
     }
   }
 }

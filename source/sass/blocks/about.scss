@@ -1,21 +1,36 @@
 .about {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: $color-black-pearl;
 
-  .about__title {
+  h2 {
     margin-top: 0;
     margin-bottom: 15px;
+
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  p {
+    font-family: $ff-pt-mono;
+    line-height: 22px;
   }
 
   .about__image {
     width: 150px;
     height: 320px;
+    margin-right: 20px;
     object-fit: contain;
     align-self: flex-start;
+  }
+
+  .about__description {
+    min-height: 320px;
   }
 
   .about__button {
@@ -23,11 +38,12 @@
   }
 
   .about__pharagraph-container {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     max-width: 970px;
   }
 
-  .about__pharagraph--mobile {
+  p:nth-child(3),
+  p:nth-child(4) {
     display: none;
   }
 
@@ -51,6 +67,14 @@
     display: block;
   }
 
+  [data-about-btn-js-mode="true"] {
+    display: block;
+  }
+
+  [data-about-btn-js-mode="false"] {
+    display: none;
+  }
+
   @include vp-1023 {
     margin-bottom: 75px;
 
@@ -58,12 +82,12 @@
       align-items: center;
     }
 
-    .about__pharagraph {
+    p {
       margin-top: 0;
       margin-bottom: 20px;
     }
 
-    .about__title {
+    h2 {
       margin-bottom: 7px;
     }
 
@@ -76,6 +100,10 @@
       max-width: 495px;
     }
 
+    .about__pharagraph-container {
+      margin-bottom: 18px;
+    }
+
     .about__button {
       margin-top: 0;
       margin-bottom: 0;
@@ -83,12 +111,17 @@
   }
 
   @include vp-767 {
+    margin-bottom: 66px;
+
     .about__image {
       display: none;
     }
 
-    .about__title {
+    h2 {
       margin-bottom: 10px;
+
+      font-size: 28px;
+      line-height: 39px;
     }
 
     .about__description {
@@ -96,15 +129,19 @@
       max-width: 100%;
     }
 
-    .about__pharagraph {
+    p {
       margin-bottom: 17px;
+
+      font-size: 14px;
+      line-height: 19px;
     }
 
-    .about__pharagraph--mobile {
+    p:nth-child(3),
+    p:nth-child(4) {
       display: block;
     }
 
-    .about__pharagraph--no-mobile {
+    p:nth-child(2) {
       display: none;
     }
   }

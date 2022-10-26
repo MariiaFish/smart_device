@@ -3,10 +3,12 @@ import {isOpenAtribute, setAttributeValue, OPEN_ATTRIBUTE_VALUE, CLOSE_ATTRIBUTE
 const ABOUT_BUTTON = 'data-about-bth';
 const ABOUT_BUTTON_ACTIVE = 'data-about-btn-state';
 const ABOUT_EXTRA_BLOCK = 'data-about-extra-information';
+const ABOUT_BUTTON_JS_MODE = 'data-about-btn-js-mode';
 const ACTIVE_STATE_BUTTON = 'active';
 const INACTIVE_STATE_BUTTON = 'inactive';
+const INACTIVE_NO_JS_MODE = 'true';
 
-const aboutContainer = document.querySelector('.about__container');
+const aboutContainer = document.querySelector('.about');
 const aboutButton = aboutContainer && aboutContainer.querySelector('.about__button');
 const buttonShowLess = aboutButton && aboutButton.querySelector('.about__btn-less');
 const buttonShowMore = aboutButton && aboutButton.querySelector('.about__btn-more');
@@ -41,6 +43,8 @@ const setButtonHandler = (button, handler) => {
 };
 
 const setAboutSecton = () => {
+  setAttributeValue(aboutButton, ABOUT_BUTTON_JS_MODE, INACTIVE_NO_JS_MODE);
+  setAttributeValue(aboutExtraBlock, ABOUT_EXTRA_BLOCK, CLOSE_ATTRIBUTE_VALUE);
   setButtonHandler(aboutButton, aboutButtonHandler);
 };
 

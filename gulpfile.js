@@ -13,7 +13,7 @@ const svgstore = require('gulp-svgstore');
 const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
-const gcmq = require('gulp-group-css-media-queries');
+// const gcmq = require('gulp-group-css-media-queries');
 
 const css = () => {
   return gulp.src('source/sass/style.scss')
@@ -23,7 +23,7 @@ const css = () => {
       .pipe(postcss([autoprefixer({
         grid: true,
       })]))
-      .pipe(gcmq()) // выключите, если в проект импортятся шрифты через ссылку на внешний источник
+      // .pipe(gcmq()) // выключите, если в проект импортятся шрифты через ссылку на внешний источник
       .pipe(gulp.dest('build/css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))

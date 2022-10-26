@@ -6,6 +6,9 @@
   @include dark-theme;
 
   h2 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+
     font-family: $ff-roboto-condensed;
     font-weight: 400;
     font-size: 15px;
@@ -32,15 +35,11 @@
   .footer__upper-container {
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
   }
 
   .footer__lower-container {
     display: flex;
-  }
-
-  .footer__title {
-    margin-top: 5px;
-    margin-bottom: 20px;
   }
 
   .footer__list-text {
@@ -55,18 +54,18 @@
 
   @include vp-1439 {
     .footer__container {
-      max-width: 1302px;
+      max-width: 1286px;
       padding: 0 32px;
     }
   }
 
   @include vp-1023 {
-    padding-top: 52px;
+    padding-top: 50px;
     padding-bottom: 65px;
 
     .footer__container {
       flex-wrap: wrap;
-      max-width: 670px;
+      max-width: 718px;
       padding: 0 24px;
     }
 
@@ -77,6 +76,7 @@
       align-items: center;
       width: 100%;
       margin-bottom: 35px;
+      margin-right: 0;
     }
 
     .footer__lower-container {
@@ -85,7 +85,7 @@
       width: 100%;
     }
 
-    .footer__title {
+    h2 {
       margin-top: 0;
       margin-bottom: 20px;
     }
@@ -107,15 +107,24 @@
     .footer__upper-container {
       flex-direction: column;
       margin-bottom: 25px;
+      margin-right: 0;
+    }
+
+    .footer__accordion-controls {
+      position: relative;
+      margin-right: 11px;
+      margin-left: 11px;
+      cursor: pointer;
     }
 
     .footer__lower-container {
       flex-direction: column;
     }
 
-    .footer__title {
-      position: relative;
-      margin-top: 22px;
+    h2 {
+      margin: 0;
+      padding-top: 22px;
+      padding-bottom: 18px;
     }
 
     .footer__navigation {
@@ -127,23 +136,16 @@
       border-bottom: 1px solid $color-white-transparent;
     }
 
-    .footer__btn-toggle {
-      display: block;
-      position: absolute;
-      top: 13px;
-      right: 0;
-    }
-
     [data-accordion-btn="close"] {
       background-image: url("../../img/svg/plus.svg");
       background-repeat: no-repeat;
-      background-position: 50% 50%;
+      background-position: right;
     }
 
     [data-accordion-btn="open"] {
       background-image: url("../../img/svg/minus.svg");
       background-repeat: no-repeat;
-      background-position: 50% 50%;
+      background-position: right;
     }
 
     [data-accordion-block="open"] {

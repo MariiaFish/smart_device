@@ -1,21 +1,18 @@
-.social {
-  margin-left: 10px;
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
   margin-top: 30px;
 
-  .social__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .social__item:not(:last-child) {
-    margin-right: 15px;
+  .social-list__item:not(:last-child) {
+    margin-right: 25px;
   }
 
   @include vp-1023 {
     margin: 0;
   }
 
-  .social__link {
+  .social-list__link {
     display: block;
   }
 

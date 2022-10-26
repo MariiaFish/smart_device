@@ -6,7 +6,7 @@ const setPhoneMask = () => {
     mask: '+{7}(000)000-00-00',
   };
 
-  if (phoneElements) {
+  if (phoneElements[0]) {
     phoneElements.forEach((phoneElement) => imask(phoneElement, maskOption));
   }
 };

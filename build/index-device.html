@@ -19,10 +19,11 @@
         <div class="logo">
           <a class="link link--header-logo logo__link" href="#">
             <img class="img img--header-logo logo__img" src="img/svg/logo-smart-device.svg" width="55" height="55"
-              alt="Логотип Smart Device">
+              alt="Логотип Smart Device изображение мозга">
           </a>
-          <span class="text text--logo-header logo__text logo__text-header logo__main-text">Smart Device</span>
-          <span class="text text--under-logo logo__text logo__text-header logo__under-text">умные технологии</span>
+          <img class="img img--header-logo logo__text logo__img-text" src="img/svg/smart-device-logo-text.svg"
+            width="145" height="25" alt="Логотип Smart Device">
+          <span class="text text--under-logo logo__text-header logo__under-text">умные технологии</span>
         </div>
         <div class="header__user-menu">
           <a class="link header__user-menu-link header__user-menu-link--mail" href="mailto:info@sd.ru">
@@ -40,9 +41,10 @@
             <span class="text text--user-menu text--phone header__user-menu-text">+7 (495) 000 5252</span>
           </a>
         </div>
-        <button class="btn btn--text btn--transparent btn--order-call header__call-btn" type="button"
+        <a class="btn btn--text btn--transparent btn--order-call header__call-btn"
+          href="https://stasonmars.ru/html-css/css-svoistvo-background-image-kak-antipattern/"
           data-open-modal="feedback">Заказать
-          звонок</button>
+          звонок</a>
       </div>
     </header>
 
@@ -111,11 +113,9 @@
       </section>
 
       <section class="about container">
-        <!-- <div class="about__container"> -->
         <div class="about__image">
           <picture>
             <source media="(max-width: 1440px)" srcset="img/2022-desktop.png, img/2022-desktop@2x.png 2x">
-            <source media="(max-width: 1023px)" srcset="img/2022-tablet.png, img/2022-tablet@2x.png 2x">
             <img class=" img img--about about__image" src="img/2022-desktop.png" width="150" height="320"
               alt="Ярко-голубые цифры 2022">
           </picture>
@@ -138,7 +138,7 @@
             </p>
           </div>
           <div class="about__pharagraph-container about__pharagraph-container--full about__pharagraph-container"
-            data-about-extra-information="close">
+            data-about-extra-information="open">
             <p class="pharagraph pharagraph--about about__pharagraph about__pharagraph--mobile">
               Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
               (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
@@ -152,38 +152,36 @@
               компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов
             </p>
           </div>
-          <button class="btn btn--text btn--transparent btn--about about__button" type="button" data-about-bth="close">
+          <button class="btn btn--text btn--transparent btn--about about__button" type="button" data-about-bth="close"
+            data-about-btn-js-mode="false">
             <span class="text text--about-btn about__btn-text about__btn-more"
               data-about-btn-state='active'>Подробнее</span>
             <span class="text text--about-btn about__btn-text about__btn-less"
               data-about-btn-state='inactive'>Свернуть</span>
           </button>
         </div>
-        <!-- </div> -->
       </section>
 
       <section class="catalog">
         <div class="container">
           <h2 class="title title--catalog catalog__title catalog__title--main">Smart Device предлагает следующие товары
             и услуги</h2>
-          <h2 class="title title--catalog catalog__title catalog__title--mobile">Товары и услуги Smart Device</h2>
+          <h2 class="title title--catalog catalog__title catalog__title--mobile">Товары и услуги<br>
+            Smart Device</h2>
           <ul class="list list--catalog catalog__list">
             <li class="catalog__item catalog__item-1">
-              <a class="link link--catalog catalog__link" href="#">
+              <a class="link link--catalog catalog__link catalog__link-1" href="#">
                 <h3 class="title title--catalog-item catalog__item-title">Производство печатных плат</h3>
-                <span class="btn btn--catalog catalog__btn-item"></span>
               </a>
             </li>
             <li class="catalog__item catalog__item-2">
-              <a class="link link--catalog catalog__link" href="#">
+              <a class="link link--catalog catalog__link catalog__link-2" href="#">
                 <h3 class="title title--catalog-item catalog__item-title">Монтаж печатных плат</h3>
-                <span class="btn btn--catalog catalog__btn-item"></span>
               </a>
             </li>
             <li class="catalog__item catalog__item-3">
-              <a class="link link--catalog catalog__link" href="#">
+              <a class="link link--catalog catalog__link catalog__link-3" href="#">
                 <h3 class="title title--catalog-item catalog__item-title">Комплектующие для светотехники</h3>
-                <span class="btn btn--catalog catalog__btn-item"></span>
               </a>
             </li>
           </ul>
@@ -213,7 +211,7 @@
                 <label class="visually-hidden" for="question">Ваш вопрос</label>
                 <textarea class="feedback__textarea" name="question" id="question" placeholder="Ваш вопрос"></textarea>
               </div>
-              <button class="btn btn--text btn--feedback feedback__btn" type="submit">Задать вопрос</button>
+              <button class="btn btn--text btn--feedback " type="submit">Задать вопрос</button>
               <div class="feedback__input-container feedback__input-container-data-processing">
                 <input type="checkbox" id="data-processing" name="data-processing" required checked>
                 <label class="feedback__label" for="data-processing">Я согласен на обработку персональных данных</label>
@@ -232,48 +230,48 @@
               <img class="img img--header-logo logo__img logo__img--footer" src="img/svg/logo-smart-device.svg"
                 width="55" height="55" alt="Логотип Smart Device">
             </a>
-            <span class="text text--logo-header logo__text logo__text-footer logo__main-text">Smart Device</span>
+            <img class="img img--header-logo logo__text logo__img-text-footer" src="img/svg/smart-device-logo-text.svg"
+              width="145" height="25" alt="Логотип Smart Device">
             <span class="text text--under-logo logo__text logo__text-footer logo__under-text">умные технологии</span>
           </div>
 
-          <div class="social">
-            <ul class="list list--footer list--social footer__list social__list">
-              <li class="social__item">
-                <a class="link link--footer link--social social__link" href="#">
-                  <svg class="social__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/sprite_auto.svg#ok-social"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="link link--footer link--social social__link" href="#">
-                  <svg class="social__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/sprite_auto.svg#vk-social"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="link link--footer link--social social__link" href="#">
-                  <svg class="social__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="img/sprite_auto.svg#pinterest-social"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="list list--footer list--social footer__list social-list">
+            <li class="social-list__item">
+              <a class="link link--footer link--social social-list__link" href="#">
+                <svg class="social-list__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#ok-social"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="link link--footer link--social social-list__link" href="#">
+                <svg class="social-list__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#vk-social"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="link link--footer link--social social-list__link" href="#">
+                <svg class="social-list__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#pinterest-social"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div class="footer__lower-container">
           <nav class="navigation footer__navigation">
             <div class="footer__wrapper">
-              <h2 class="title title--footer footer__title">Разделы сайта</h2>
-              <button class="btn btn--footer-toggle footer__btn-toggle" data-accordion-btn="open"
-                data-accordion-btn-number="1">
-                <span class="visually-hidden">Кнопка открытия-закрытия меню</span>
-              </button>
+              <div class="footer__accordion-controls" data-accordion-btn="open" data-accordion-btn-number="1">
+                <h2 class="title title--footer footer__title">Разделы сайта</h2>
+                <button class="btn btn--footer-toggle footer__btn-toggle" type="button">
+                  <span class="visually-hidden">Кнопка открытия-закрытия меню</span>
+                </button>
+              </div>
               <ul class="list list--footer list--navigation footer__list footer__list-lower navigation__list"
                 data-accordion-block="open" data-accordion-block-number="1">
                 <li class="navigation__item navigation__item--first-order">
@@ -307,11 +305,12 @@
 
           <div class="contacts footer__contacts">
             <div class="footer__wrapper">
-              <h2 class="title title--footer footer__title">Наш офис</h2>
-              <button class="btn btn--footer-toggle footer__btn-toggle" data-accordion-btn="open"
-                data-accordion-btn-number="2">
-                <span class="visually-hidden">Кнопка открытия-закрытия меню</span>
-              </button>
+              <div class="footer__accordion-controls" data-accordion-btn="open" data-accordion-btn-number="2">
+                <h2 class="title title--footer footer__title">Наш офис</h2>
+                <button class="btn btn--footer-toggle footer__btn-toggle" type="button">
+                  <span class="visually-hidden">Кнопка открытия-закрытия меню</span>
+                </button>
+              </div>
               <ul class="list list--footer footer__list footer__list-lower contacts__list" data-accordion-block="open"
                 data-accordion-block-number="2">
                 <li class="contacts__item">
@@ -363,7 +362,7 @@
             <textarea class="feedback__textarea" name="question" id="modal-question"
               placeholder="Ваш вопрос"></textarea>
           </div>
-          <button class="btn btn--text btn--feedback btn--feedback-modal feedback__btn" type="submit">Задать
+          <button class="btn btn--text btn--feedback btn--feedback-modal " type="submit">Задать
             вопрос</button>
           <div
             class="feedback__input-container feedback__input-container-data-processing feedback__input-container-data-processing--feedback-modal">

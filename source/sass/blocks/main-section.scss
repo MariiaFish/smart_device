@@ -17,7 +17,7 @@
 
   .main-section__container {
     max-width: 720px;
-    margin: 0 auto;
+    margin-left: 123px;
   }
 
   .main-section__link {
@@ -54,6 +54,7 @@
 
     .main-section__container {
       max-width: 670px;
+      margin-left: 0;
     }
 
     .main-section__link {
@@ -75,7 +76,7 @@
     padding-bottom: 185px;
     min-height: 560px;
 
-    background-image: url("../../img/printed-circuit-board@2x.jpg");
+    background-image: url("../../img/printed-circuit-board.jpg");
 
     @include retina {
       background-image: url("../../img/printed-circuit-board@2x.jpg");

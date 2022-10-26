@@ -27,32 +27,36 @@
     justify-content: center;
   }
 
+  .catalog__item {
+    position: relative;
+  }
+
+  .catalog__link::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/svg/blue-square-desktop.svg");
+    bottom: 0;
+    right: 0;
+  }
+
   .catalog__link {
     display: block;
+    position: relative;
     padding-top: 50px;
     padding-left: 40px;
     padding-right: 50px;
-  }
-
-  .catalog__item {
-    position: relative;
     min-height: 650px;
     max-width: 350px;
     background-color: $color-black-pearl;
     background-size: 350px 650px;
     background-repeat: no-repeat;
     background-position: 0 0;
+    cursor: pointer;
   }
 
-  .catalog__btn-item {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    bottom: 0;
-    right: 0;
-  }
-
-  .catalog__item-1 {
+  .catalog__link-1 {
     background-image: url("../../img/catalog-card-1-desktop.jpg");
 
     @include retina {
@@ -60,7 +64,7 @@
     }
   }
 
-  .catalog__item-2 {
+  .catalog__link-2 {
     background-image: url("../../img/catalog-card-2-desktop.jpg");
 
     @include retina {
@@ -68,7 +72,7 @@
     }
   }
 
-  .catalog__item-3 {
+  .catalog__link-3 {
     background-image: url("../../img/catalog-card-3-desktop.jpg");
 
     @include retina {
@@ -89,18 +93,15 @@
       row-gap: 30px;
     }
 
-    .catalog__item {
+    .catalog__link {
       min-height: 250px;
       max-width: 100%;
+      padding-top: 36px;
       background-size: 100% 250px;
     }
 
-    .catalog__link {
-      padding-top: 36px;
-    }
 
-
-    .catalog__item-1 {
+    .catalog__link-1 {
       background-image: url("../../img/catalog-card-1-tablet.jpg");
 
       @include retina {
@@ -108,7 +109,7 @@
       }
     }
 
-    .catalog__item-2 {
+    .catalog__link-2 {
       background-image: url("../../img/catalog-card-2-tablet.jpg");
 
       @include retina {
@@ -116,7 +117,7 @@
       }
     }
 
-    .catalog__item-3 {
+    .catalog__link-3 {
       background-image: url("../../img/catalog-card-3-tablet.jpg");
 
       @include retina {
@@ -137,6 +138,16 @@
       padding-top: 30px;
       padding-left: 30px;
       padding-right: 0;
+      min-height: 250px;
+      min-width: 270px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .catalog__link::after {
+      width: 40px;
+      height: 40px;
+      background-image: url("../../img/svg/blue-square.svg");
     }
 
     .catalog__title--main {
@@ -145,41 +156,6 @@
 
     .catalog__title--mobile {
       display: block;
-    }
-
-    .catalog__item {
-      min-height: 250px;
-      min-width: 270px;
-      background-size: 100% 250px;
-    }
-
-    .catalog__btn-item {
-      width: 40px;
-      height: 40px;
-    }
-
-    .catalog__item-1 {
-      background-image: url("../../img/catalog-card-1.jpg");
-
-      @include retina {
-        background-image: url("../../img/catalog-card-1@2x.jpg");
-      }
-    }
-
-    .catalog__item-2 {
-      background-image: url("../../img/catalog-card-2.jpg");
-
-      @include retina {
-        background-image: url("../../img/catalog-card-2@2x.jpg");
-      }
-    }
-
-    .catalog__item-3 {
-      background-image: url("../../img/catalog-card-3.jpg");
-
-      @include retina {
-        background-image: url("../../img/catalog-card-3@2x.jpg");
-      }
     }
   }
 }

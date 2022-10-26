@@ -6,6 +6,7 @@ const CLOSE_ATTRIBUTE_VALUE = 'close';
 const OPEN_ATTRIBUTE_VALUE = 'open';
 
 const accordionContainer = document.querySelector('.footer__lower-container');
+const accordionControlArea = accordionContainer && accordionContainer.querySelectorAll('.footer__accordion-controls');
 const accordionButtons = accordionContainer && accordionContainer.querySelectorAll('.footer__btn-toggle');
 const accordionBlocks = accordionContainer && accordionContainer.querySelectorAll('.footer__list');
 
@@ -16,13 +17,13 @@ const setAttributeValue = (element, attributeName, attributeValue) => element.se
 const getAttributeValue = (element, attributeName) => element.getAttribute(attributeName);
 
 const setAttributesToClose = (elements, attributeName) => {
-  if (elements) {
+  if (elements[0]) {
     elements.forEach((element) => setAttributeValue(element, attributeName, CLOSE_ATTRIBUTE_VALUE));
   }
 };
 
 const initialSetAccordionElements = () => {
-  setAttributesToClose(accordionButtons, ATTRIBUTE_BUTTON);
+  setAttributesToClose(accordionControlArea, ATTRIBUTE_BUTTON);
   setAttributesToClose(accordionBlocks, ATTRIBUTE_BLOCK);
 };
 
@@ -46,15 +47,16 @@ const buttonClickHandler = (button) => () => {
   }
 };
 
-const setButtonsHandler = (buttons, handler) => {
-  if (buttons) {
-    buttons.forEach((button) => button.addEventListener('click', handler(button)));
+const setElementsHandler = (elements, handler) => {
+  if (elements[0]) {
+    elements.forEach((element) => element.addEventListener('click', handler(element)));
   }
 };
 
 const setAccordion = () => {
   initialSetAccordionElements();
-  setButtonsHandler(accordionButtons, buttonClickHandler);
+  setElementsHandler(accordionButtons, buttonClickHandler);
+  setElementsHandler(accordionControlArea, buttonClickHandler);
 };
 
 export {setAccordion, isOpenAtribute, setAttributeValue, CLOSE_ATTRIBUTE_VALUE, OPEN_ATTRIBUTE_VALUE};

@@ -2,13 +2,24 @@
   padding-top: 120px;
   padding-bottom: 120px;
 
-  .advantages__title {
+  h3 {
     margin-top: 20px;
     margin-bottom: 15px;
+
+    font-weight: 400;
+    line-height: 34px;
+    font-size: 24px;
+    font-family: $ff-roboto-condensed;
+    color: $color-deep-sky-blue;
   }
 
-  .advantages__pharagraph {
+  p {
+    max-width: 505px;
     margin: 0;
+
+    color: $color-default-black;
+    font-family: $ff-pt-mono;
+    line-height: 135%;
   }
 
   .advantages__list {
@@ -29,17 +40,17 @@
       &:hover,
       &:focus {
         background-color: $color-deep-sky-blue;
-
-        .advantages__pharagraph,
-        .advantages__title {
-          color: $color-default-white;
-        }
-
-        .advantages__icon {
-          fill: $color-default-white;
-        }
       }
     }
+  }
+
+  .advantages__item:hover > p,
+  .advantages__item:hover > h3 {
+    color: $color-default-white;
+  }
+
+  .advantages__item:hover > svg {
+    fill: $color-default-white;
   }
 
   .advantages__item::after {
@@ -65,9 +76,12 @@
       padding-right: 30px;
     }
 
-    .advantages__title {
+    h3 {
       margin-top: 0;
       margin-bottom: 0;
+
+      font-size: 20px;
+      line-height: 28px;
     }
   }
 
@@ -86,8 +100,12 @@
       padding: 30px 30px 35px 30px;
     }
 
-    .advantages__pharagraph {
+    p {
       min-height: 152px;
+
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 210px;
     }
 
     .advantages__icon {
@@ -95,7 +113,7 @@
       height: 30px;
     }
 
-    .advantages__title {
+    h3 {
       margin-top: 9px;
       margin-bottom: 8px;
     }
