@@ -1,33 +1,8 @@
 .logo {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: 15px;
-
-  .logo__link {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    justify-self: center;
-  }
-
-  .logo__img {
-    width: 55px;
+  .logo__img,
+  .logo__img-footer {
+    width: 215px;
     height: 55px;
-  }
-
-  .logo__img-tex {
-    width: 145px;
-    height: 25px;
-    margin-top: 7px;
-  }
-
-  .logo__text {
-    align-self: flex-end;
-  }
-
-  .logo__under-text {
-    align-self: center;
-    grid-column-start: 2;
-    grid-column-end: 3;
   }
 
   @include vp-1023 {

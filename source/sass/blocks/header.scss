@@ -27,15 +27,21 @@
     display: flex;
     flex-wrap: wrap;
     align-self: flex-start;
-    margin-left: 114px;
-    margin-top: 5px;
+    margin: 5px auto 0 auto;
   }
 
   .header__user-menu-link {
     display: flex;
-    margin-right: 123px;
     margin-top: 10px;
     color: $color-alice-blue;
+  }
+
+  .header__user-menu-link--mail {
+    margin-right: 123px;
+  }
+
+  .header__user-menu-link--phone {
+    margin-right: 13px;
   }
 
   .header__user-menu-icon {
@@ -58,20 +64,25 @@
     }
 
     .header__user-menu {
-      margin-right: 29px;
-      margin-top: 0;
+      margin: 0 17px 0 auto;
+    }
+
+    .header__user-menu-link--mail {
+      margin-right: 22px;
+    }
+
+    .header__user-menu-link--phone {
+      margin-right: 0;
     }
 
     .header__user-menu-icon {
       margin-right: 0;
     }
 
-    .header__user-menu-link--mail {
-      margin-right: 41px;
-    }
-
     .header__user-menu-link {
       margin-right: 0;
+      margin-top: 0;
+      padding: 11px;
     }
 
     .header__call-btn {
@@ -95,15 +106,16 @@
     }
 
     .header__user-menu-link {
-      margin-top: 5px;
+      margin-top: 0;
+      padding: 7px;
     }
 
     .header__user-menu {
-      margin-right: 21px;
+      margin: 0 14px 0 auto;
     }
 
     .header__user-menu-link--mail {
-      margin-right: 39px;
+      margin-right: 25px;
     }
   }
 }

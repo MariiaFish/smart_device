@@ -6,7 +6,6 @@ const CLOSE_ATTRIBUTE_VALUE = 'close';
 const OPEN_ATTRIBUTE_VALUE = 'open';
 
 const accordionContainer = document.querySelector('.footer__lower-container');
-const accordionControlArea = accordionContainer && accordionContainer.querySelectorAll('.footer__accordion-controls');
 const accordionButtons = accordionContainer && accordionContainer.querySelectorAll('.footer__btn-toggle');
 const accordionBlocks = accordionContainer && accordionContainer.querySelectorAll('.footer__list');
 
@@ -23,7 +22,7 @@ const setAttributesToClose = (elements, attributeName) => {
 };
 
 const initialSetAccordionElements = () => {
-  setAttributesToClose(accordionControlArea, ATTRIBUTE_BUTTON);
+  setAttributesToClose(accordionButtons, ATTRIBUTE_BUTTON);
   setAttributesToClose(accordionBlocks, ATTRIBUTE_BLOCK);
 };
 
@@ -56,7 +55,6 @@ const setElementsHandler = (elements, handler) => {
 const setAccordion = () => {
   initialSetAccordionElements();
   setElementsHandler(accordionButtons, buttonClickHandler);
-  setElementsHandler(accordionControlArea, buttonClickHandler);
 };
 
 export {setAccordion, isOpenAtribute, setAttributeValue, CLOSE_ATTRIBUTE_VALUE, OPEN_ATTRIBUTE_VALUE};

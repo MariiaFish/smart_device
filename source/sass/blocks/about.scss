@@ -35,16 +35,11 @@
 
   .about__button {
     margin-bottom: 20px;
+    margin-top: 40px;
   }
 
   .about__pharagraph-container {
-    margin-bottom: 40px;
     max-width: 970px;
-  }
-
-  p:nth-child(3),
-  p:nth-child(4) {
-    display: none;
   }
 
   .about__btn-text {
@@ -100,12 +95,8 @@
       max-width: 495px;
     }
 
-    .about__pharagraph-container {
-      margin-bottom: 18px;
-    }
-
     .about__button {
-      margin-top: 0;
+      margin-top: 18px;
       margin-bottom: 0;
     }
   }
@@ -129,20 +120,16 @@
       max-width: 100%;
     }
 
+    .about__pharagraph-container--short {
+      height: 211px;
+      overflow: hidden;
+    }
+
     p {
       margin-bottom: 17px;
 
       font-size: 14px;
       line-height: 19px;
-    }
-
-    p:nth-child(3),
-    p:nth-child(4) {
-      display: block;
-    }
-
-    p:nth-child(2) {
-      display: none;
     }
   }
 }

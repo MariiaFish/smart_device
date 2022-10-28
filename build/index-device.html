@@ -18,12 +18,12 @@
       <div class="container header__container">
         <div class="logo">
           <a class="link link--header-logo logo__link" href="#">
-            <img class="img img--header-logo logo__img" src="img/svg/logo-smart-device.svg" width="55" height="55"
-              alt="Логотип Smart Device изображение мозга">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/svg/logo-smart-device-mobile.svg">
+              <img class="img img--header-logo logo__img" src="img/svg/logo-smart-device.svg" width="215" height="55"
+                alt="Логотип Smart Device">
+            </picture>
           </a>
-          <img class="img img--header-logo logo__text logo__img-text" src="img/svg/smart-device-logo-text.svg"
-            width="145" height="25" alt="Логотип Smart Device">
-          <span class="text text--under-logo logo__text-header logo__under-text">умные технологии</span>
         </div>
         <div class="header__user-menu">
           <a class="link header__user-menu-link header__user-menu-link--mail" href="mailto:info@sd.ru">
@@ -47,7 +47,6 @@
           звонок</a>
       </div>
     </header>
-
 
     <main class="main">
       <section class="main-section">
@@ -73,8 +72,8 @@
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite_auto.svg#watch"></use>
             </svg>
-            <h3 class="title title--advantages advantages__title">Оперативные сроки</h3>
-            <p class="pharagraph pharagraph--advantages advantages__pharagraph">Усовершенствованная логистическая
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая
               система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в
               самые короткие сроки</p>
           </li>
@@ -83,8 +82,8 @@
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite_auto.svg#people-workers"></use>
             </svg>
-            <h3 class="title title--advantages advantages__title">Крупные поставщики</h3>
-            <p class="pharagraph pharagraph--advantages advantages__pharagraph">Нашими поставщиками являются такие
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие
               крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями
               обеспечивает хорошее качество нашей продукции.
             </p>
@@ -95,7 +94,7 @@
               <use xlink:href="img/sprite_auto.svg#detective"></use>
             </svg>
             <h3 class="title title--advantages advantages__title">Полная конфиденциальность</h3>
-            <p class="pharagraph pharagraph--advantages advantages__pharagraph">По желанию клиента мы обеспечиваем
+            <p>По желанию клиента мы обеспечиваем
               полную конфиденциальность.
             </p>
           </li>
@@ -104,8 +103,8 @@
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite_auto.svg#tag-money"></use>
             </svg>
-            <h3 class="title title--advantages advantages__title">Персонализация стоимости</h3>
-            <p class="pharagraph pharagraph--advantages advantages__pharagraph">Мы подбираем определенную фабрику,
+            <h3>Персонализация стоимости</h3>
+            <p>Мы подбираем определенную фабрику,
               поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
             </p>
           </li>
@@ -115,36 +114,29 @@
       <section class="about container">
         <div class="about__image">
           <picture>
-            <source media="(max-width: 1440px)" srcset="img/2022-desktop.png, img/2022-desktop@2x.png 2x">
+            <source media="(max-width: 1920px)" srcset="img/2022-desktop.webp, img/2022-desktop@2x.webp 2x">
+            <source media="(max-width: 1920px)" srcset="img/2022-desktop.png, img/2022-desktop@2x.png 2x">
             <img class=" img img--about about__image" src="img/2022-desktop.png" width="150" height="320"
               alt="Ярко-голубые цифры 2022">
           </picture>
         </div>
         <div class="about__description">
-          <h2 class="title title--about about__title">О компании</h2>
+          <h2>О компании</h2>
           <div class="about__pharagraph-container about__pharagraph-container--short">
-            <p class="pharagraph pharagraph--about about__pharagraph">
+            <p>
               Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии
               с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             </p>
-            <p class="pharagraph pharagraph--about about__pharagraph about__pharagraph--no-mobile">
-              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+            <p>
+              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>
               Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
               (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
               Производители светотехники России.
-            </p>
-            <p class="pharagraph pharagraph--about about__pharagraph about__pharagraph--mobile">
-              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
             </p>
           </div>
           <div class="about__pharagraph-container about__pharagraph-container--full about__pharagraph-container"
             data-about-extra-information="open">
-            <p class="pharagraph pharagraph--about about__pharagraph about__pharagraph--mobile">
-              Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-              (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
-              Производители светотехники России.
-            </p>
-            <p class="pharagraph pharagraph--about about__pharagraph">
+            <p>
               Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых
               продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и
               20 городов присутствия.
@@ -226,13 +218,10 @@
       <div class="footer__container">
         <div class="footer__upper-container footer__wrapper">
           <div class="logo">
-            <a class="link link--header-logo logo__link" href="#">
-              <img class="img img--header-logo logo__img logo__img--footer" src="img/svg/logo-smart-device.svg"
-                width="55" height="55" alt="Логотип Smart Device">
+            <a class="link link--footer-logo logo__link" href="#">
+              <img class="img logo__img-footer" src="img/svg/logo-smart-device.svg" width="215" height="55"
+                alt="Логотип Smart Device">
             </a>
-            <img class="img img--header-logo logo__text logo__img-text-footer" src="img/svg/smart-device-logo-text.svg"
-              width="145" height="25" alt="Логотип Smart Device">
-            <span class="text text--under-logo logo__text logo__text-footer logo__under-text">умные технологии</span>
           </div>
 
           <ul class="list list--footer list--social footer__list social-list">
@@ -266,12 +255,11 @@
         <div class="footer__lower-container">
           <nav class="navigation footer__navigation">
             <div class="footer__wrapper">
-              <div class="footer__accordion-controls" data-accordion-btn="open" data-accordion-btn-number="1">
-                <h2 class="title title--footer footer__title">Разделы сайта</h2>
-                <button class="btn btn--footer-toggle footer__btn-toggle" type="button">
-                  <span class="visually-hidden">Кнопка открытия-закрытия меню</span>
-                </button>
-              </div>
+              <h2 class="title title--footer footer__title">Разделы сайта</h2>
+              <button class="btn btn--footer-toggle footer__btn-toggle" type="button" data-accordion-btn="open"
+                data-accordion-btn-number="1">
+                <span class="text text--footer-button footer__button-text">Разделы сайта</span>
+              </button>
               <ul class="list list--footer list--navigation footer__list footer__list-lower navigation__list"
                 data-accordion-block="open" data-accordion-block-number="1">
                 <li class="navigation__item navigation__item--first-order">
@@ -305,12 +293,11 @@
 
           <div class="contacts footer__contacts">
             <div class="footer__wrapper">
-              <div class="footer__accordion-controls" data-accordion-btn="open" data-accordion-btn-number="2">
-                <h2 class="title title--footer footer__title">Наш офис</h2>
-                <button class="btn btn--footer-toggle footer__btn-toggle" type="button">
-                  <span class="visually-hidden">Кнопка открытия-закрытия меню</span>
-                </button>
-              </div>
+              <h2 class="title title--footer footer__title">Наш офис</h2>
+              <button class="btn btn--footer-toggle footer__btn-toggle" type="button" data-accordion-btn="open"
+                data-accordion-btn-number="2">
+                <span class="text text--footer-button footer__button-text">Наш офис</span>
+              </button>
               <ul class="list list--footer footer__list footer__list-lower contacts__list" data-accordion-block="open"
                 data-accordion-block-number="2">
                 <li class="contacts__item">
