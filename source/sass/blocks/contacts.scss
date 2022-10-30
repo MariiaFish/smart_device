@@ -7,10 +7,6 @@
     .contacts__list {
       width: 320px;
     }
-
-    .contacts__item {
-      margin-bottom: 8px;
-    }
   }
 
   @include vp-767 {
