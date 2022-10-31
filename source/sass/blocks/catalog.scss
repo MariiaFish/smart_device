@@ -36,7 +36,7 @@
     content: "";
     width: 60px;
     height: 60px;
-    background-image: url("../../img/svg/blue-square-desktop.svg");
+    background-image: url("../img/svg/blue-square-desktop.svg");
     bottom: 0;
     right: 0;
   }
@@ -57,26 +57,26 @@
   }
 
   .catalog__link-1 {
-    background-image: url("../../img/catalog-card-1-desktop.jpg");
+    background-image: url("../img/catalog-card-1-desktop.jpg");
 
     @include retina {
-      background-image: url("../../img/catalog-card-1-desktop@2x.jpg");
+      background-image: url("../img/catalog-card-1-desktop@2x.jpg");
     }
   }
 
   .catalog__link-2 {
-    background-image: url("../../img/catalog-card-2-desktop.jpg");
+    background-image: url("../img/catalog-card-2-desktop.jpg");
 
     @include retina {
-      background-image: url("../../img/catalog-card-2-desktop@2x.jpg");
+      background-image: url("../img/catalog-card-2-desktop@2x.jpg");
     }
   }
 
   .catalog__link-3 {
-    background-image: url("../../img/catalog-card-3-desktop.jpg");
+    background-image: url("../img/catalog-card-3-desktop.jpg");
 
     @include retina {
-      background-image: url("../../img/catalog-card-3-desktop@2x.jpg");
+      background-image: url("../img/catalog-card-3-desktop@2x.jpg");
     }
   }
 
@@ -102,26 +102,26 @@
 
 
     .catalog__link-1 {
-      background-image: url("../../img/catalog-card-1-tablet.jpg");
+      background-image: url("../img/catalog-card-1-tablet.jpg");
 
       @include retina {
-        background-image: url("../../img/catalog-card-1-tablet@2x.jpg");
+        background-image: url("../img/catalog-card-1-tablet@2x.jpg");
       }
     }
 
     .catalog__link-2 {
-      background-image: url("../../img/catalog-card-2-tablet.jpg");
+      background-image: url("../img/catalog-card-2-tablet.jpg");
 
       @include retina {
-        background-image: url("../../img/catalog-card-2-tablet@2x.jpg");
+        background-image: url("../img/catalog-card-2-tablet@2x.jpg");
       }
     }
 
     .catalog__link-3 {
-      background-image: url("../../img/catalog-card-3-tablet.jpg");
+      background-image: url("../img/catalog-card-3-tablet.jpg");
 
       @include retina {
-        background-image: url("../../img/catalog-card-3-tablet@2x.jpg");
+        background-image: url("../img/catalog-card-3-tablet@2x.jpg");
       }
     }
   }

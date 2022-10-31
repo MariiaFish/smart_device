@@ -8,12 +8,16 @@
 
   color: $color-alice-blue;
   background: linear-gradient($color-black-pearl 75%, $color-transparent);
-  background-image: url("../../img/bg-header-desktop.png");
+  background-image: -webkit-image-set(
+    url("../img/bg-header-desktop.png"),
+    url("../img/bg-header-desktop.webp") type("image/webp") 1x,
+    url("../img/bg-header-desktop@2x.webp") type("image/webp") 2x
+  );
   background-position: center;
   background-size: 1920px 127px;
 
   @include retina {
-    background-image: url("../../img/bg-header-desktop@2x.png");
+    background-image: url("../img/bg-header-desktop@2x.png");
   }
 
   .header__container {
@@ -56,11 +60,15 @@
     padding-top: 20px;
     padding-bottom: 25px;
 
-    background-image: url("../../img/bg-header-tablet.png");
+    background-image: -webkit-image-set(
+      url("../img/bg-header-tablet.png"),
+      url("../img/bg-header-tablet.webp") type("image/webp") 1x,
+      url("../img/bg-header-tablet@2x.webp") type("image/webp") 2x
+    );
     background-size: 770px 100px;
 
     @include retina {
-      background-image: url("../../img/bg-header-desktop@2x.png");
+      background-image: url("../img/bg-header-desktop@2x.png");
     }
 
     .header__user-menu {
@@ -75,6 +83,7 @@
     .header__user-menu-icon {
       margin-right: 0;
     }
+
 
     .header__user-menu-link {
       margin-top: 0;
@@ -94,11 +103,15 @@
     padding-top: 15px;
     padding-bottom: 20px;
 
-    background-image: url("../../img/bg-header.png");
+    background-image: -webkit-image-set(
+      url("../img/bg-header.png"),
+      url("../img/bg-header.webp") type("image/webp") 1x,
+      url("../img/bg-header@2x.webp") type("image/webp") 2x
+    );
     background-size: 320px 70px;
 
     @include retina {
-      background-image: url("../../img/bg-header@2x.png");
+      background-image: url("../img/bg-header@2x.png");
     }
 
     .header__user-menu-link {
