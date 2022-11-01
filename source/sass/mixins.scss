@@ -4,6 +4,27 @@
   }
 }
 
+@mixin retina-bg($bg, $ext: "jpg") {
+  @supports not (background-image: url("../img/#{$bg}.webp")) {
+    background-image: url("../img/${bg}.@{ext}");
+  }
+
+  @supports (background-image: url("../img/#{$bg}.webp")) {
+    background-image: url("../img/#{$bg}.webp");
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @supports not (background-image: url("../img/#{$bg}@2x.webp")) {
+      background-image: url("../img/#{$bg}@2x.@{ext}");
+    }
+
+    @supports (background-image: url("../img/#{$bg}@2x.webp")) {
+      background-image: url("../img/#{$bg}@2x.webp");
+    }
+  }
+}
+
+
 @mixin btn-border($color, $width) {
   border: {
     width: $width;

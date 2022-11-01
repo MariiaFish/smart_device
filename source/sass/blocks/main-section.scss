@@ -6,22 +6,20 @@
   font-family: $ff-roboto-condensed;
 
   color: $color-alice-blue;
-  background-image: -webkit-image-set(
-    url("../img/printed-circuit-board-desktop.jpg") 1x,
-    url("../img/printed-circuit-board-desktop@2x.jpg") 2x,
-    url("../img/printed-circuit-board-desktop.webp") type("image/webp") 1x,
-    url("../img/printed-circuit-board-desktop@2x.webp") type("image/webp") 2x
-  );
   background-size: cover;
-
   background-color: $color-black-pearl;
 
-  // @include retina {
-  //   background-image: -webkit-image-set(
-  //     url("../img/printed-circuit-board-desktop@2x.jpg") 2x,
-  //     url("../img/printed-circuit-board-desktop@2x.webp") type("image/webp") 2x
-  //   );
-  // }
+  @include retina-bg("../img/printed-circuit-board-desktop");
+
+  p {
+    width: 97%;
+    margin: 0;
+
+    font-family: $ff-pt-mono;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 155%;
+  }
 
   .main-section__container {
     max-width: 720px;
@@ -41,29 +39,11 @@
     margin-bottom: 31px;
   }
 
-  .main-section__pharagraph {
-    width: 100%;
-    margin: 0;
-
-    font-family: $ff-pt-mono;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 155%;
-  }
-
   @include vp-1023 {
     min-height: 640px;
     padding-top: 180px;
-    background-image: -webkit-image-set(
-      url("../img/printed-circuit-board-tablet.jpg") 1x,
-      url("../img/printed-circuit-board-tablet@2x.jpg") 2x,
-      url("../img/printed-circuit-board-tablet.webp") type("image/webp") 1x,
-      url("../img/printed-circuit-board-tablet@2x.webp") type("image/webp") 2x,
-    );
 
-    // @include retina {
-    //   background-image: url("../img/printed-circuit-board-tablet@2x.jpg");
-    // }
+    @include retina-bg("../img/printed-circuit-board-tablet");
 
     .main-section__container {
       max-width: 670px;
@@ -89,16 +69,7 @@
     padding-bottom: 185px;
     min-height: 560px;
 
-    background-image: -webkit-image-set(
-      url("../img/printed-circuit-board.jpg") 1x,
-      url("../img/printed-circuit-board@2x.jpg") 2x,
-      url("../img/printed-circuit-board.webp") type("image/webp") 1x,
-      url("../img/printed-circuit-board@2x.webp") type("image/webp") 2x
-    );
-
-    // @include retina {
-    //   background-image: url("../img/printed-circuit-board@2x.jpg");
-    // }
+    @include retina-bg("../img/printed-circuit-board");
 
     .main-section__container {
       min-width: 270px;

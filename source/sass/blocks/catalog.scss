@@ -44,7 +44,7 @@
   .catalog__link {
     display: block;
     position: relative;
-    padding-top: 50px;
+    padding-top: 48px;
     padding-left: 40px;
     padding-right: 50px;
     min-height: 650px;
@@ -57,35 +57,27 @@
   }
 
   .catalog__link-1 {
-    background-image: url("../img/catalog-card-1-desktop.jpg");
-
-    @include retina {
-      background-image: url("../img/catalog-card-1-desktop@2x.jpg");
-    }
+    @include retina-bg("../img/catalog-card-1-desktop");
   }
 
   .catalog__link-2 {
-    background-image: url("../img/catalog-card-2-desktop.jpg");
-
-    @include retina {
-      background-image: url("../img/catalog-card-2-desktop@2x.jpg");
-    }
+    @include retina-bg("../img/catalog-card-2-desktop");
   }
 
   .catalog__link-3 {
-    background-image: url("../img/catalog-card-3-desktop.jpg");
-
-    @include retina {
-      background-image: url("../img/catalog-card-3-desktop@2x.jpg");
-    }
+    @include retina-bg("../img/catalog-card-3-desktop");
   }
 
   @include vp-1023 {
-    padding-top: 54px;
+    padding-top: 53px;
     padding-bottom: 75px;
 
     .catalog__title {
       margin-bottom: 40px;
+    }
+
+    .catalog__item-title {
+      width: 150px;
     }
 
     .catalog__list {
@@ -96,33 +88,21 @@
     .catalog__link {
       min-height: 250px;
       max-width: 100%;
-      padding-top: 36px;
-      background-size: 100% 250px;
+      padding-top: 37px;
+      padding-left: 42px;
+      background-size: 100% 100%;
     }
 
-
     .catalog__link-1 {
-      background-image: url("../img/catalog-card-1-tablet.jpg");
-
-      @include retina {
-        background-image: url("../img/catalog-card-1-tablet@2x.jpg");
-      }
+      @include retina-bg("../img/catalog-card-1-tablet");
     }
 
     .catalog__link-2 {
-      background-image: url("../img/catalog-card-2-tablet.jpg");
-
-      @include retina {
-        background-image: url("../img/catalog-card-2-tablet@2x.jpg");
-      }
+      @include retina-bg("../img/catalog-card-2-tablet");
     }
 
     .catalog__link-3 {
-      background-image: url("../img/catalog-card-3-tablet.jpg");
-
-      @include retina {
-        background-image: url("../img/catalog-card-3-tablet@2x.jpg");
-      }
+      @include retina-bg("../img/catalog-card-3-tablet");
     }
   }
 
@@ -134,8 +114,20 @@
       margin-bottom: 25px;
     }
 
+    .catalog__link-1 {
+      @include retina-bg("../img/catalog-card-1");
+    }
+
+    .catalog__link-2 {
+      @include retina-bg("../img/catalog-card-2");
+    }
+
+    .catalog__link-3 {
+      @include retina-bg("../img/catalog-card-3");
+    }
+
     .catalog__link {
-      padding-top: 30px;
+      padding-top: 29px;
       padding-left: 30px;
       padding-right: 0;
       min-height: 250px;

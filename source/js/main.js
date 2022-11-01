@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {setAccordion} from './modules/accordion';
 import {setAboutSecton} from './modules/about';
 import {setPhoneMask} from './modules/phone-input';
+import {setForms} from './modules/local-storage';
 
 
 // ---------------------------------
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setPhoneMask();
   setAccordion();
   setAboutSecton();
+  setForms();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

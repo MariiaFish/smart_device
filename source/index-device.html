@@ -9,6 +9,7 @@
   <title>Smart Device производство печатных плат</title>
   <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/printed-circuit-board@2x.webp" as="image" media="(max-width: 767px)">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -17,7 +18,7 @@
     <header class="header">
       <div class="container header__container">
         <div class="logo">
-          <a class="link link--header-logo logo__link" href="#">
+          <a class="link link--header-logo logo__link">
             <picture>
               <source media="(max-width: 768px)" srcset="img/svg/logo-smart-device-mobile.svg">
               <img class="img img--header-logo logo__img" src="img/svg/logo-smart-device.svg" width="215" height="55"
@@ -41,10 +42,10 @@
             <span class="text text--user-menu text--phone header__user-menu-text">+7 (495) 000 5252</span>
           </a>
         </div>
-        <a class="btn btn--text btn--transparent btn--order-call header__call-btn"
-          href="https://stasonmars.ru/html-css/css-svoistvo-background-image-kak-antipattern/"
-          data-open-modal="feedback">Заказать
-          звонок</a>
+        <a class="btn btn--text btn--transparent btn--order-call header__call-btn" href="modal.html"
+          data-open-modal="feedback">
+          Заказатьзвонок
+        </a>
       </div>
     </header>
 
@@ -74,7 +75,8 @@
             </svg>
             <h3>Оперативные сроки</h3>
             <p>Усовершенствованная логистическая
-              система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в
+              система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат
+              и&nbsp;комплектующих в
               самые короткие сроки</p>
           </li>
           <li class="advantages__item advantages__item--major-suppliers">
@@ -84,7 +86,7 @@
             </svg>
             <h3>Крупные поставщики</h3>
             <p>Нашими поставщиками являются такие
-              крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями
+              крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями
               обеспечивает хорошее качество нашей продукции.
             </p>
           </li>
@@ -104,8 +106,7 @@
               <use xlink:href="img/sprite_auto.svg#tag-money"></use>
             </svg>
             <h3>Персонализация стоимости</h3>
-            <p>Мы подбираем определенную фабрику,
-              поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+            <p>поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.
             </p>
           </li>
         </ul>
@@ -114,7 +115,7 @@
       <section class="about container">
         <div class="about__image">
           <picture>
-            <source type="image/webp" srcset="img/2022-desktop.webp">
+            <source type="image/webp" srcset="img/2022-desktop.webp 1x, img/2022-desktop@2x.webp 2x">
             <img class=" img img--about about__image" src="img/2022-desktop.png" width="150" height="320"
               alt="Ярко-голубые цифры 2022">
           </picture>
@@ -123,12 +124,15 @@
           <h2>О компании</h2>
           <div class="about__pharagraph-container about__pharagraph-container--short">
             <p>
-              Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии
-              с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+              Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
+              технологии
+              с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
             </p>
             <p>
-              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>
-              Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+              Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+              REFOND.<br>
+              Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных
+              Дорог
               (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
               Производители светотехники России.
             </p>
@@ -136,11 +140,13 @@
           <div class="about__pharagraph-container about__pharagraph-container--full about__pharagraph-container"
             data-about-extra-information="open">
             <p>
-              Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых
-              продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и
-              20 городов присутствия.
-              Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри
-              компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов
+              Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
+              1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых
+              продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов
+              по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой
+              внутри
+              компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов
             </p>
           </div>
           <button class="btn btn--text btn--transparent btn--about about__button" type="button" data-about-bth="close"
@@ -188,24 +194,28 @@
             <p class="pharagraph pharagraph--feedback-under feedback__pharagraph-under">Мы проконсультируем Вас
               бесплатно
             </p>
-            <form class="feedback__form" action="#" id="feedback-form">
+            <form class="feedback__form" action="https://echo.htmlacademy.ru/" id="feedback-form">
               <div class="feedback__input-container feedback__input-container-name">
                 <label class="visually-hidden" for="name">Имя</label>
-                <input class="feedback__input" type="text" id="name" placeholder="Имя" required>
+                <input class="feedback__input" type="text" id="name" name="user-name" placeholder="Имя" required>
               </div>
               <div class="feedback__input-container feedback__input-container-phone">
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input class="feedback__input feedback__input--phone" type="text" id="phone" placeholder="Телефон"
-                  required>
+                <input class="feedback__input feedback__input--phone" type="text" id="phone" name="user-phone"
+                  placeholder="Телефон" required>
               </div>
               <div class="feedback__input-container feedback__input-container-textarea">
                 <label class="visually-hidden" for="question">Ваш вопрос</label>
-                <textarea class="feedback__textarea" name="question" id="question" placeholder="Ваш вопрос"></textarea>
+                <textarea class="feedback__textarea" id="question" name="user-question"
+                  placeholder="Ваш вопрос"></textarea>
               </div>
-              <button class="btn btn--text btn--feedback " type="submit">Задать вопрос</button>
-              <div class="feedback__input-container feedback__input-container-data-processing">
-                <input type="checkbox" id="data-processing" name="data-processing" required checked>
-                <label class="feedback__label" for="data-processing">Я согласен на обработку персональных данных</label>
+              <div class="feedback__form-controls-container">
+                <div class="feedback__input-container feedback__input-container-data-processing">
+                  <input type="checkbox" id="data-processing" name="data-processing" required>
+                  <label class="feedback__label" for="data-processing">Я согласен на обработку персональных
+                    данных</label>
+                </div>
+                <button class="btn btn--text btn--feedback feedback__button-submit" type="submit">Отправить</button>
               </div>
             </form>
           </div>
@@ -223,17 +233,18 @@
             </a>
           </div>
 
-          <ul class="list list--footer list--social footer__list social-list">
+          <ul class="list footer__list social-list">
             <li class="social-list__item">
-              <a class="link link--footer link--social social-list__link" href="#"></a>
-              <svg class="social-list__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
-                xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite_auto.svg#ok-social"></use>
-              </svg>
+              <a class="link link--footer link--social social-list__link" href="#"
+                aria-label="Переход на страницу Smart Device в Одноклассниках">
+                <svg class="social-list__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#ok-social"></use>
+                </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="link link--footer link--social social-list__link" href="#">
+              <a class="link social-list__link" href="#" aria-label="Переход на страницу Smart Device во Вконтакте">
                 <svg class="social-list__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
                   xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite_auto.svg#vk-social"></use>
@@ -241,7 +252,7 @@
               </a>
             </li>
             <li class="social-list__item">
-              <a class="link link--footer link--social social-list__link" href="#">
+              <a class="link social-list__link" href="#" aria-label="Переход на страницу Smart Device в Pinterest">
                 <svg class="social-list__icon" width="30" height="30" viewBox="0 0 30 30" fill="#F8FDFF"
                   xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite_auto.svg#pinterest-social"></use>
@@ -333,28 +344,28 @@
           проконсультируем<br>
           вас бесплатно в удобное время
         </p>
-        <form class="feedback__form feedback__form--modal" action="#">
+        <form class="feedback__form feedback__form--modal" action="https://echo.htmlacademy.ru/">
           <div class="feedback__input-container feedback__input-container-name">
             <label class="visually-hidden" for="modal-name">Имя</label>
-            <input class="feedback__input" type="text" id="modal-name" placeholder="Имя" required>
+            <input class="feedback__input" type="text" id="modal-name" name="user-name" placeholder="Имя" required>
           </div>
           <div class="feedback__input-container feedback__input-container-phone">
             <label class="visually-hidden" for="modal-phone">Телефон</label>
-            <input class="feedback__input feedback__input--phone" type="text" id="modal-phone" placeholder="Телефон"
-              required>
+            <input class="feedback__input feedback__input--phone" type="text" id="modal-phone" name="user-phone"
+              placeholder="Телефон" required>
           </div>
           <div class="feedback__input-container feedback__input-container-textarea">
             <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
-            <textarea class="feedback__textarea" name="question" id="modal-question"
+            <textarea class="feedback__textarea" id="modal-question" name="user-question-call"
               placeholder="Ваш вопрос"></textarea>
           </div>
-          <button class="btn btn--text btn--feedback btn--feedback-modal " type="submit">Задать
-            вопрос</button>
-          <div
-            class="feedback__input-container feedback__input-container-data-processing feedback__input-container-data-processing--feedback-modal">
-            <input type="checkbox" id="modal-data-processing" name="modal-data-processing" required checked>
-            <label class="feedback__label" for="modal-data-processing">Я согласен на обработку персональных
-              данных</label>
+          <div class="feedback__form-controls-container feedback__form-controls-container--modal">
+            <div class="feedback__input-container feedback__input-container-data-processing">
+              <input type="checkbox" id="data-processing-modal" name="data-processing-modal" required>
+              <label class="feedback__label" for="data-processing-modal">Я согласен на обработку персональных
+                данных</label>
+            </div>
+            <button class="btn btn--text btn--feedback  btn--feedback-modal" type="submit">Задать вопрос</button>
           </div>
         </form>
         <button class="modal__close-btn modal__close-btn--feedback btn-reset" type="button" aria-label="Закрыть попап"

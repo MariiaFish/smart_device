@@ -4,7 +4,8 @@
   color: $color-default-white;
   background-color: $color-deep-sky-blue;
   background-image: url("../../img/feedback-bg-desktop.png");
-  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-position: 50% 78%;
 
   @include retina {
     background-image: url("../../img/feedback-bg-desktop@2x.png");
@@ -17,11 +18,20 @@
     border-radius: 3px;
   }
 
+  &--order-call {
+    background-image: none;
+  }
+
   .feedback__container {
     position: relative;
     max-width: 580px;
     margin-left: auto;
     margin-right: 10px;
+  }
+
+  .feedback__container--order-call {
+    max-width: 580px;
+    margin: auto auto;
   }
 
   .feedback__container::after {
@@ -30,8 +40,13 @@
     width: 510px;
     height: 285px;
     top: 19%;
-    left: -109%;
+    right: 120%;
     background-image: url("../../img/paper-airplane-desktop.png");
+    background-repeat: no-repeat;
+  }
+
+  .feedback__container--order-call::after {
+    background-image: none;
   }
 
   .feedback__pharagraph-main {
@@ -61,17 +76,30 @@
     grid-column-end: -1;
   }
 
+  .feedback__form-controls-container {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    flex-direction: row-reverse;
+  }
+
+  .feedback__form-controls-container--modal {
+    flex-direction: column-reverse;
+  }
+
   .feedback__input-container-data-processing {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-self: end;
     align-items: end;
+    margin-left: 37px;
 
     &--feedback-modal {
       justify-content: normal;
     }
   }
+
 
   button {
     justify-self: flex-start;
@@ -83,8 +111,15 @@
     width: 100%;
     border: none;
     border-radius: 3px;
-    color: $color-default-white;
+    color: $color-alice-blue;
     background-color: $color-deep-sky-blue-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
   }
 
   textarea,
@@ -98,6 +133,7 @@
 
     font-size: 14px;
     line-height: 16px;
+    cursor: pointer;
     opacity: 0.8;
   }
 
@@ -110,6 +146,8 @@
   input[type="checkbox"] {
     width: 15px;
     height: 15px;
+    padding: 0;
+    margin-left: 15px;
     appearance: none;
     background-color: $color-transparent;
     cursor: pointer;
@@ -131,8 +169,8 @@
     content: "";
     width: 7px;
     height: 6px;
-    top: 28px;
-    left: 13px;
+    top: 29px;
+    left: 14px;
     background-image: url("../../img/svg/checked-vector.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -170,6 +208,10 @@
     padding-bottom: 123px;
     background-image: none;
 
+    &--order-call {
+      padding-top: 175px;
+    }
+
     .feedback__container {
       max-width: 100%;
       margin: 0 auto;
@@ -192,19 +234,29 @@
     .feedback__input-container-data-processing {
       max-width: 235px;
       align-self: flex-start;
+      margin-left: 0;
+      margin-right: 86px;
     }
 
-    input {
-      padding: 11px;
+    .feedback__form-controls-container {
+      justify-content: space-between;
+    }
+
+    button {
+      max-width: 100%;
     }
 
     textarea {
       padding-top: 32px;
     }
 
+    textarea:focus {
+      padding-top: 32px;
+    }
+
     input[type="checkbox"]:checked::after {
-      top: 28px;
-      left: 1px;
+      top: 29px;
+      left: 2px;
     }
 
     input[type="checkbox"]::before {
@@ -219,7 +271,11 @@
 
   @include vp-767 {
     padding-top: 50px;
-    padding-bottom: 69px;
+    padding-bottom: 70px;
+
+    &--order-call {
+      padding-top: 100px;
+    }
 
     .feedback__pharagraph-main {
       margin-bottom: 6px;
@@ -244,8 +300,13 @@
     }
 
     .feedback__input-container-data-processing {
-      margin-left: 0;
-      margin-top: 4px;
+      margin-right: 0;
+      margin-top: 27px;
+    }
+
+    .feedback__form-controls-container {
+      display: flex;
+      flex-direction: column-reverse;
     }
 
     input {

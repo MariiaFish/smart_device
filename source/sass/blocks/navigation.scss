@@ -7,10 +7,6 @@
     column-gap: 30px;
   }
 
-  .navigation__item {
-    margin-bottom: 10px;
-  }
-
   @include vp-1023 {
     margin-right: 0;
 
@@ -18,11 +14,7 @@
       grid-template-columns: 220px;
     }
 
-    .navigation__item {
-      margin-bottom: 4px;
-    }
-
-    .navigation__item--seventh-order {
+    .navigation__item--seventh-orde {
       order: 7;
     }
 
@@ -42,6 +34,10 @@
 
     [data-accordion-block="close"] {
       display: none;
+    }
+
+    .navigation__list {
+      margin-bottom: 20px;
     }
   }
 }
