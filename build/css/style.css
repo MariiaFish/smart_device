@@ -313,28 +313,28 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: url("../../fonts/pt-mono-regular.woff2") format("woff2"), url("../../fonts/pt-mono-regular.woff") format("woff"); }
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff"); }
 
 @font-face {
   font-style: normal;
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../../fonts/roboto-condensed-regular.woff") format("woff"); }
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff"); }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../../fonts/roboto-condensed-bold.woff") format("woff"); }
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff"); }
 
 @font-face {
   font-style: normal;
   font-weight: 500;
   font-family: "Roboto";
   font-display: swap;
-  src: url("../../fonts/roboto-medium.woff2") format("woff2"), url("../../fonts/roboto-medium.woff") format("woff"); }
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff"); }
 
 *,
 *::before,
@@ -541,7 +541,6 @@ button,
   border-radius: 3px;
   cursor: pointer;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
@@ -577,13 +576,6 @@ button,
     border-width: 1px;
     border-style: solid;
     border-color: #00b3ff; }
-  .btn--catalog {
-    margin: 0;
-    background-color: #00b3ff;
-    background-image: url("../../img/svg/catolog-card-arrow.svg");
-    background-size: 4px 8px;
-    background-repeat: no-repeat;
-    background-position: center; }
   .btn--feedback {
     min-width: 268px;
     padding-top: 18px;
@@ -1066,12 +1058,12 @@ button,
       .footer .footer__contacts {
         border-bottom: 1px solid #ffffffb3; }
       .footer [data-accordion-btn="close"] {
-        background-image: url("../../img/svg/plus.svg");
+        background-image: url("../img/svg/plus.svg");
         background-repeat: no-repeat;
         background-position: 100% 43%; }
       .footer [data-accordion-btn="open"] {
         padding-bottom: 15px;
-        background-image: url("../../img/svg/minus.svg");
+        background-image: url("../img/svg/minus.svg");
         background-repeat: no-repeat;
         background-position: 100% 50%; }
       .footer [data-accordion-block="open"] {
@@ -1717,7 +1709,7 @@ p {
       .catalog .catalog__link::after {
         width: 40px;
         height: 40px;
-        background-image: url("../../img/svg/blue-square.svg"); }
+        background-image: url("../img/svg/blue-square.svg"); }
       .catalog .catalog__title--main {
         display: none; }
       .catalog .catalog__title--mobile {
@@ -1728,12 +1720,12 @@ p {
   padding-bottom: 250px;
   color: #ffffff;
   background-color: #00b3ff;
-  background-image: url("../../img/feedback-bg-desktop.png");
+  background-image: url("../img/feedback-bg-desktop.png");
   background-repeat: no-repeat;
   background-position: 50% 78%; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .feedback {
-      background-image: url("../../img/feedback-bg-desktop@2x.png"); } }
+      background-image: url("../img/feedback-bg-desktop@2x.png"); } }
   .feedback--modal {
     width: 500px;
     padding: 60px 40px;
@@ -1756,7 +1748,7 @@ p {
     height: 285px;
     top: 19%;
     right: 120%;
-    background-image: url("../../img/paper-airplane-desktop.png");
+    background-image: url("../img/paper-airplane-desktop.png");
     background-repeat: no-repeat; }
   .feedback .feedback__container--order-call::after {
     background-image: none; }
@@ -1878,7 +1870,7 @@ p {
     height: 6px;
     top: 29px;
     left: 14px;
-    background-image: url("../../img/svg/checked-vector.svg");
+    background-image: url("../img/svg/checked-vector.svg");
     background-repeat: no-repeat;
     background-position: 0 0; }
   .feedback .feedback__input-container-data-processing--feedback-modal > input[type="checkbox"]::before {

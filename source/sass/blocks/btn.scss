@@ -53,15 +53,6 @@
     @include btn-border($color-deep-sky-blue, 1px);
   }
 
-  &--catalog {
-    margin: 0;
-    background-color: $color-deep-sky-blue;
-    background-image: url("../../img/svg/catolog-card-arrow.svg");
-    background-size: 4px 8px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   &--feedback {
     min-width: 268px;
     padding-top: 18px;
