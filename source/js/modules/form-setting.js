@@ -1,3 +1,6 @@
+import {setPhoneMask} from './phone-input';
+import {srightModeForm} from './form-submit-btn';
+
 const forms = document.querySelectorAll('.feedback__form');
 
 const clearStorage = () => {
@@ -30,9 +33,12 @@ const setFormElements = (formElements) => {
 const setForm = (form) => {
   const formFields = form.elements;
   const formButton = form.querySelector('button');
+  formButton.disabled = true;
 
   setFormElements(formFields);
   setFormButton(formButton);
+  setPhoneMask();
+  srightModeForm(form, formButton);
 };
 
 const setForms = () => {

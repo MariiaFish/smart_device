@@ -23,6 +23,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 85px;
+    row-gap: 45px;
     align-items: center;
     justify-content: center;
   }
@@ -106,7 +107,7 @@
     }
   }
 
-  @include vp-767 {
+  @include vp-768 {
     padding-top: 50px;
     padding-bottom: 86px;
 

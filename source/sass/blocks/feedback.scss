@@ -13,7 +13,7 @@
 
   &--modal {
     width: 500px;
-    padding: 60px 40px;
+    padding: 43px 33px;
     background-image: none;
     border-radius: 3px;
   }
@@ -21,85 +21,6 @@
   &--order-call {
     background-image: none;
   }
-
-  .feedback__container {
-    position: relative;
-    max-width: 580px;
-    margin-left: auto;
-    margin-right: 10px;
-  }
-
-  .feedback__container--order-call {
-    max-width: 580px;
-    margin: auto auto;
-  }
-
-  .feedback__container::after {
-    content: "";
-    position: absolute;
-    width: 510px;
-    height: 285px;
-    top: 19%;
-    right: 120%;
-    background-image: url("../img/paper-airplane-desktop.png");
-    background-repeat: no-repeat;
-  }
-
-  .feedback__container--order-call::after {
-    background-image: none;
-  }
-
-  .feedback__pharagraph-main {
-    margin-top: 0;
-    margin-bottom: 11px;
-  }
-
-  .feedback__pharagraph-under {
-    margin: 0;
-  }
-
-  .feedback__form {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 275px);
-    column-gap: 30px;
-    row-gap: 20px;
-    margin-top: 35px;
-
-    &--modal {
-      grid-template-columns: 420px;
-    }
-  }
-
-  .feedback__input-container-textarea {
-    grid-column-start: 1;
-    grid-column-end: -1;
-  }
-
-  .feedback__form-controls-container {
-    display: flex;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    flex-direction: row-reverse;
-  }
-
-  .feedback__form-controls-container--modal {
-    flex-direction: column-reverse;
-  }
-
-  .feedback__input-container-data-processing {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-self: end;
-    align-items: end;
-    margin-left: 37px;
-
-    &--feedback-modal {
-      justify-content: normal;
-    }
-  }
-
 
   button {
     justify-self: flex-start;
@@ -176,14 +97,6 @@
     background-position: 0 0;
   }
 
-  .feedback__input-container-data-processing--feedback-modal > input[type="checkbox"]::before {
-    top: 34px;
-  }
-
-  .feedback__input-container-data-processing--feedback-modal > input[type="checkbox"]:checked::after {
-    top: 38px;
-  }
-
   textarea {
     min-height: 155px;
     padding: 24px 15px 15px 15px;
@@ -203,43 +116,143 @@
     padding-top: 24px;
   }
 
-  @include vp-1023 {
+  .feedback__input-phone-unfilled {
+    box-shadow: 0 0 4px 6px $color-roman;
+    color: $color-roman;
+  }
+
+  .feedback__input-phone-filled {
+    box-shadow: none;
+    color: $color-default-white;
+  }
+}
+
+.feedback__wrapper {
+  position: relative;
+}
+
+.feedback__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 39%;
+  height: 84%;
+  top: 19%;
+  left: 41px;
+  background-image: url("../img/paper-airplane-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.feedback__container {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.feedback__container--order-call {
+  max-width: 580px;
+  margin: auto auto;
+}
+
+.feedback__container--order-call::after {
+  background-image: none;
+}
+
+.feedback__pharagraph-main {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.feedback__pharagraph-under {
+  margin: 0;
+}
+
+.feedback__form {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 275px);
+  column-gap: 30px;
+  row-gap: 20px;
+  margin-top: 35px;
+
+  &--modal {
+    grid-template-columns: 420px;
+    row-gap: 21px;
+  }
+}
+
+
+.feedback__input-container-textarea {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.feedback__form-controls-container {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  flex-direction: row-reverse;
+}
+
+.feedback__form-controls-container--modal {
+  flex-direction: column-reverse;
+}
+
+.feedback__checkbox-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-self: end;
+  align-items: end;
+  margin-left: 37px;
+}
+
+.feedback__checkbox-container--modal {
+  justify-content: normal;
+  align-items: center;
+  margin-left: 0;
+  align-self: flex-start;
+
+  input[type="checkbox"]::before {
+    top: 21px;
+    left: 8px;
+  }
+
+  input[type="checkbox"]:checked::after {
+    top: 25px;
+    left: 10px;
+  }
+
+  label {
+    margin-left: 3px;
+    margin-top: 7px;
+  }
+}
+
+.feedback__checkbox-container--feedback-modal > input[type="checkbox"]::before {
+  top: 34px;
+}
+
+.feedback__checkbox-container--feedback-modal > input[type="checkbox"]:checked::after {
+  top: 38px;
+}
+
+@include vp-1439 {
+  .feedback__wrapper::after {
+    width: 37%;
+    left: 19px;
+  }
+}
+
+
+@include vp-1023 {
+  .feedback {
     padding-top: 45px;
     padding-bottom: 123px;
     background-image: none;
 
     &--order-call {
       padding-top: 175px;
-    }
-
-    .feedback__container {
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    .feedback__pharagraph-main {
-      margin-bottom: 6px;
-    }
-
-    .feedback__form {
-      width: 100%;
-      grid-template-columns: repeat(2, 48%);
-      margin-top: 25px;
-    }
-
-    .feedback__container::after {
-      display: none;
-    }
-
-    .feedback__input-container-data-processing {
-      max-width: 235px;
-      align-self: flex-start;
-      margin-left: 0;
-      margin-right: 86px;
-    }
-
-    .feedback__form-controls-container {
-      justify-content: space-between;
     }
 
     button {
@@ -269,25 +282,44 @@
     }
   }
 
-  @include vp-767 {
+  .feedback__container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .feedback__pharagraph-main {
+    margin-bottom: 6px;
+  }
+
+  .feedback__form {
+    width: 100%;
+    grid-template-columns: repeat(2, 48%);
+    margin-top: 25px;
+  }
+
+  .feedback__wrapper::after {
+    background-image: none;
+  }
+
+  .feedback__checkbox-container {
+    max-width: 235px;
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: 86px;
+  }
+
+  .feedback__form-controls-container {
+    justify-content: space-between;
+  }
+}
+
+@include vp-768 {
+  .feedback {
     padding-top: 50px;
     padding-bottom: 70px;
 
     &--order-call {
       padding-top: 100px;
-    }
-
-    .feedback__pharagraph-main {
-      margin-bottom: 6px;
-    }
-
-    .feedback__pharagraph-under {
-      max-width: 270px;
-    }
-
-    .feedback__form {
-      grid-template-columns: 100%;
-      margin-top: 33px;
     }
 
     textarea {
@@ -297,16 +329,6 @@
 
     textarea::placeholder {
       padding-top: 0;
-    }
-
-    .feedback__input-container-data-processing {
-      margin-right: 0;
-      margin-top: 27px;
-    }
-
-    .feedback__form-controls-container {
-      display: flex;
-      flex-direction: column-reverse;
     }
 
     input {
@@ -327,5 +349,28 @@
       align-self: flex-start;
       margin-left: 0;
     }
+  }
+
+  .feedback__pharagraph-main {
+    margin-bottom: 6px;
+  }
+
+  .feedback__pharagraph-under {
+    max-width: 270px;
+  }
+
+  .feedback__form {
+    grid-template-columns: 100%;
+    margin-top: 33px;
+  }
+
+  .feedback__checkbox-container {
+    margin-right: 0;
+    margin-top: 27px;
+  }
+
+  .feedback__form-controls-container {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

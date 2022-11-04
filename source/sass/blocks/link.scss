@@ -6,6 +6,10 @@
     }
   }
 
+  &--btn {
+    user-select: none;
+  }
+
   &--get-consultation {
     border-radius: 3px;
     color: $color-default-white;

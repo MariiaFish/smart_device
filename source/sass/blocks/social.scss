@@ -1,22 +1,27 @@
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
+  margin-left: 12px;
   margin-top: 30px;
 
   .social-list__item:not(:last-child) {
-    margin-right: 25px;
-  }
-
-  @include vp-1023 {
-    margin: 0;
+    margin-right: 15px;
   }
 
   .social-list__link {
     display: block;
+    padding: 5px;
   }
 
-  @include vp-767 {
-    margin-top: 20px;
+  @include vp-1023 {
+    margin: 4px 0 0 0;
+
+    .social-list__item:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  @include vp-768 {
+    margin-top: 11px;
   }
 }
