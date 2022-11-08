@@ -21,23 +21,16 @@
   }
 
   .header__user-menu {
-    display: flex;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 11px;
     width: 500px;
-    margin: 5px auto 0 auto;
-    padding-left: 15px;
   }
 
   .header__user-menu-link {
     display: flex;
-    margin-top: 10px;
+    margin-left: 17px;
     color: $color-alice-blue;
-  }
-
-  .header__user-menu-link--phone {
-    margin-right: 24px;
   }
 
   .header__user-menu-icon {
@@ -58,13 +51,12 @@
     @include retina-bg("../img/bg-header-tablet");
 
     .header__user-menu {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: end;
-      margin: 0 0 0 auto;
+      margin-right: 19px;
+      margin-bottom: 14px;
       max-width: 200px;
-    }
-
-    .header__user-menu-link--phone {
-      margin-right: 0;
     }
 
     .header__user-menu-icon {
@@ -75,7 +67,6 @@
     .header__user-menu-link {
       margin-top: 0;
       padding: 11px;
-      margin-right: 18px;
     }
 
     .header__call-btn {
@@ -88,23 +79,19 @@
   }
 
   @include vp-767 {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 20px;
 
     @include retina-bg("../img/bg-header");
 
     .header__user-menu-link {
-      margin-top: 0;
-      padding: 7px;
+      padding: 10px;
       margin-right: 0;
     }
 
     .header__user-menu {
-      margin: 0 14px 0 auto;
-    }
-
-    .header__user-menu-link--mail {
-      margin-right: 25px;
+      margin-right: 12px;
+      margin-bottom: 0;
     }
   }
 }

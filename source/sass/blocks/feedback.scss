@@ -1,4 +1,5 @@
 .feedback {
+  position: relative;
   padding-top: 165px;
   padding-bottom: 250px;
   color: $color-default-white;
@@ -6,7 +7,7 @@
   background-image: url("../img/feedback-bg-desktop.png");
   background-repeat: no-repeat;
   background-position: 50% 78%;
-  background-size: cover;
+  background-size: 100% 189%;
 
   @include retina {
     background-image: url("../img/feedback-bg-desktop@2x.png");
