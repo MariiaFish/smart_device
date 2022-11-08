@@ -24,8 +24,10 @@
     display: flex;
     flex-wrap: wrap;
     align-self: flex-start;
-    max-width: 500px;
+    justify-content: space-between;
+    width: 500px;
     margin: 5px auto 0 auto;
+    padding-left: 15px;
   }
 
   .header__user-menu-link {
@@ -34,12 +36,8 @@
     color: $color-alice-blue;
   }
 
-  .header__user-menu-link--mail {
-    margin-right: 123px;
-  }
-
   .header__user-menu-link--phone {
-    margin-right: 13px;
+    margin-right: 24px;
   }
 
   .header__user-menu-icon {
@@ -47,7 +45,9 @@
   }
 
   .header__call-btn {
+    align-self: flex-start;
     margin-right: 58px;
+    margin-top: 6px;
   }
 
   @include vp-1023 {
@@ -58,15 +58,15 @@
     @include retina-bg("../img/bg-header-tablet");
 
     .header__user-menu {
-      margin: 0 17px 0 auto;
+      justify-content: end;
+      margin: 0 0 0 auto;
       max-width: 200px;
     }
 
-    .header__user-menu-link--mail {
-      margin-right: 22px;
+    .header__user-menu-link--phone {
+      margin-right: 0;
     }
 
-    .header__user-menu-link--phone,
     .header__user-menu-icon {
       margin-right: 0;
     }
@@ -75,6 +75,7 @@
     .header__user-menu-link {
       margin-top: 0;
       padding: 11px;
+      margin-right: 18px;
     }
 
     .header__call-btn {
@@ -86,7 +87,7 @@
     }
   }
 
-  @include vp-768 {
+  @include vp-767 {
     padding-top: 15px;
     padding-bottom: 20px;
 
@@ -95,6 +96,7 @@
     .header__user-menu-link {
       margin-top: 0;
       padding: 7px;
+      margin-right: 0;
     }
 
     .header__user-menu {

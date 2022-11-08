@@ -1,4 +1,5 @@
 .logo {
+  align-self: flex-start;
   .logo__img,
   .logo__img-footer {
     width: 215px;
@@ -19,7 +20,9 @@
     }
   }
 
-  @include vp-768 {
+  @include vp-767 {
+    align-self: center;
+
     .logo__img {
       width: 35px;
       height: 35px;

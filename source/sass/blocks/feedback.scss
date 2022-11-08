@@ -6,6 +6,7 @@
   background-image: url("../img/feedback-bg-desktop.png");
   background-repeat: no-repeat;
   background-position: 50% 78%;
+  background-size: cover;
 
   @include retina {
     background-image: url("../img/feedback-bg-desktop@2x.png");
@@ -13,7 +14,7 @@
 
   &--modal {
     width: 500px;
-    padding: 43px 33px;
+    padding: 40px 40px 30px 40px;
     background-image: none;
     border-radius: 3px;
   }
@@ -160,7 +161,7 @@
 
 .feedback__pharagraph-main {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .feedback__pharagraph-under {
@@ -267,6 +268,10 @@
       padding-top: 32px;
     }
 
+    input[type="checkbox"] {
+      margin-left: 9px;
+    }
+
     input[type="checkbox"]:checked::after {
       top: 29px;
       left: 2px;
@@ -313,7 +318,7 @@
   }
 }
 
-@include vp-768 {
+@include vp-767 {
   .feedback {
     padding-top: 50px;
     padding-bottom: 70px;
@@ -329,6 +334,10 @@
 
     textarea::placeholder {
       padding-top: 0;
+    }
+
+    input[type="checkbox"] {
+      margin-left: 16px;
     }
 
     input {
